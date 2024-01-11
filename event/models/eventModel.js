@@ -8,8 +8,7 @@ const eventSchema = new mongoose.Schema({
   },
   userId: {
     type: mongoose.Schema.Types.ObjectId,
-    default: new mongoose.Types.ObjectId, // Auto-generate ObjectId for vacationId
-    unique: true,
+    default: ()=>new mongoose.Types.ObjectId(), // Auto-generate ObjectId for vacationId
   },
   title: {
     type: String,

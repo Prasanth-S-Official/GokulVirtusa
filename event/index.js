@@ -17,7 +17,7 @@ const corsOptions = {
 app.use(cors(corsOptions));
 
 mongoose
-  .connect("mongodb://127.0.0.1:27017/eventdb")
+  .connect("mongodb://127.0.0.1:27017/neweventdb")
   .then(() => {
     console.log("Database connected");
     app.listen(8080, () => {
