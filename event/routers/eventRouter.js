@@ -4,8 +4,8 @@ const { validateToken } = require("../authUtils");
 const router = express.Router();
 const userController = require('../controllers/userController');
 
-router.get("/event", eventController.getAllevent);
-router.get("/event/user/:userId", eventController.geteventByUserId);
+router.get("/event", eventController.getAllEvents);
+router.get("/event/user/:userId", eventController.getEventsByUserId);
 router.get("/event/:eventId", eventController.getEventById);
 router.post("/event", eventController.addEvent);
 router.put("/event/:eventId", eventController.updateEvent);

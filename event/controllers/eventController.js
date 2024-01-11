@@ -35,6 +35,7 @@ const addEvent = async (req, res) => {
     const event = await Event.create(req.body);
     res.status(200).json({ message: 'Event added successfully' });
   } catch (error) {
+    console.log("error",error);
     res.status(500).json({ message: error.message });
   }
 };
