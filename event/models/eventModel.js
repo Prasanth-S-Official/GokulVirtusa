@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const eventSchema = new mongoose.Schema({
   eventId: {
     type: mongoose.Schema.Types.ObjectId,
-    default: new mongoose.Types.ObjectId, // Auto-generate ObjectId for vacationId
+    default: ()=>new mongoose.Types.ObjectId(), // Auto-generate ObjectId for vacationId
     unique: true,
   },
   userId: {
