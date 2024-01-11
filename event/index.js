@@ -17,7 +17,7 @@ const corsOptions = {
 app.use(cors(corsOptions));
 
 mongoose
-  .connect("mongodb://127.0.0.1:27017/vacationdb")
+  .connect("mongodb://127.0.0.1:27017/eventdb")
   .then(() => {
     console.log("Database connected");
     app.listen(8080, () => {
@@ -28,5 +28,5 @@ mongoose
     console.log(error);
   });
 
-app.use("/user", userRouter);
-app.use("/event",event );
+  app.use("/api/auth", userRouter);
+  app.use("/api",event);
