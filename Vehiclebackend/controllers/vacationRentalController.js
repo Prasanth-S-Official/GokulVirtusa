@@ -80,15 +80,13 @@ const getVacationRentalsByOwnerId = async (req, res) => {
   try {
     const {userId} = req.params;
     console.log("Own", userId);
-    const sortValue = req.query.sortValue || 1; // Default to ascending order if not provided
     const search = req.query.searchValue || ''; // Default to empty string if not provided
     const searchRegex = new RegExp(search, 'i'); // Case-insensitive search regex
-    console.log("sortValue", sortValue);
+    console.log("search", search);
 
     const vacationRentals = await VacationRental.find({ userId: userId, title: searchRegex }).select('-_id -__v')
-      .sort({ pricePerDay: parseInt(sortValue) });
 
-    console.log("vacationRentals", vacationRentals);
+    // console.log("vacationRentals", vacationRentals);
     res.status(200).json(vacationRentals);
   } catch (error) {
     res.status(500).json({ message: error.message });
