@@ -12,11 +12,16 @@ const getUserByUsernameAndPassword = async (req, res) => {
     };
     const token = generateToken(user._id)
     console.log("token",token);
-    
+    let responseObj={
+      "username":user.firstName+" "+user.lastName,
+      "role":user.role,
+      "token":token,
+      "userId":user.userId
+    }
 
-    res.status(200).json({"userInformation":user,"token":token});
+    res.status(200).json(responseObj);
   } catch (error) {
-console.log("error",error);
+   console.log("error",error);
     res.status(500).json({ message: error.message });
   }
 };
@@ -35,7 +40,7 @@ const addUser = async (req, res) => {
 };
 const getAllUsers = async (req, res) => {
   try {
-    const users = await User.find({}, '-__v');
+    const users = await User.find({}).select('-_id -__v');
     res.status(200).json(users);
   } catch (error) {
     res.status(500).json({ message: error.message });
