@@ -1,7 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const userRouter = require("./routers/userRouter");
-const event = require("./routers/eventRouter");
+const jobs = require("./routers/jobRouter");
 const app = express();
 const cors = require("cors");
 
@@ -29,4 +29,4 @@ mongoose
   });
 
   app.use("/api/auth", userRouter);
-  app.use("/api",event);
+  app.use("/api",jobs);
