@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 const jobSchema = new mongoose.Schema({
-  jobId: {
+  jobId: {   
     type: mongoose.Schema.Types.ObjectId,
     default: ()=>new mongoose.Types.ObjectId(), // Auto-generate ObjectId for vacationId
     unique: true,
