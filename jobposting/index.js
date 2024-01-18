@@ -30,5 +30,7 @@ mongoose
 
   app.use("/api/auth", userRouter);
   app.use("/api",jobs);
-//[1:18 PM] Dhayananth D
-https://github.com/dhayananthdevaraj/Infinitynodebackend.git
+
+//   git remote add origin https://github.com/Prasanth-S-Official/VirtusaBackend.git
+// git branch -M main
+// git push -u origin main
