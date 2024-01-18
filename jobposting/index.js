@@ -17,7 +17,7 @@ const corsOptions = {
 app.use(cors(corsOptions));
 
 mongoose
-  .connect("mongodb://127.0.0.1:27017/jobdb1")
+  .connect("mongodb://127.0.0.1:27017/jobdb")
   .then(() => {
     console.log("Database connected");
     app.listen(8080, () => {
