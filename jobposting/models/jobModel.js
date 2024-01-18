@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const jobModel = new mongoose.Schema({
+const jobSchema = new mongoose.Schema({
   jobId: {
     type: mongoose.Schema.Types.ObjectId,
     default: ()=>new mongoose.Types.ObjectId(), // Auto-generate ObjectId for vacationId
@@ -39,6 +39,6 @@ const jobModel = new mongoose.Schema({
   },
 });
 
-const Event = mongoose.model('Job', jobSchema);
+const Job = mongoose.model('Job', jobSchema);
 
-module.exports = Event;
+module.exports = Job;
