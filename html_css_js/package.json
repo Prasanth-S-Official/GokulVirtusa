@@ -1,0 +1,21 @@
+{
+  "name": "webtest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "rm -rf node_modules && npm i && node server.js",
+    "test-puppeteer": "node puppeteer-testNew.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "json-server": "^0.17.4",
+    "nodemon": "^3.0.1",
+    "puppeteer": "^19.4.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.2.2"
+  }
+}

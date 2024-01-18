@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="../style.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div class="background">
+    <div class="container-fluid pt-3">
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"><img src="../../public/assets/logo.png" alt="" class="w-100"> </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="../admin/dashboard.html">Dashboard</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../admin/menu.html">Menu</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../admin/table.html">Tables</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../admin/user.html">Users</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../admin/payment.html">Payments</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+
+              <div class="d-flex align-items-center">
+                <div class="" id="navbarSupportedContent">
+                  <div class="dropdown">
+                    <button class=" dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      <img src="../../public/assets/user.png" alt="" class="w-100 profile">
+                    </button>
+                    <ul class="dropdown-menu box arrow-top">
+                      <div class="">
+                        <div class="d-flex align-items-center">
+                          <div>
+                            <img src="../../public/assets/user.png" alt="" class="w-100 profile">
+                          </div>
+                          <div class="ms-3">
+                            <h2 class="mb-0" style="line-height: 1;">Abc</h2>
+                            <small>abc@gmail.com</small>
+                          </div>
+                        </div>
+                        <div class="d-flex mt-3">
+                          <label>Table No. :</label>
+                          <strong class="d-inline-block ms-2">2</strong>
+                        </div>
+                        <div class="d-flex">
+                          <label>Login date & time :</label>
+                          <strong class="d-inline-block ms-2">12-10-2023</strong>
+                          <strong class="d-inline-block ms-2">10:07 AM</strong>
+                        </div>
+                        <div class="text-end mt-4">
+                          <button class="logoutbtn">Logout</button>
+
+                        </div>
+                      </div>
+                    </ul>
+                  </div>
+
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </div>
+
+
+
+  <div class="container-fluid">
+    <div class="card dashboard-card p-4">
+      <div class="row">
+        <div class="col-12 col-sm-6 col-md-6 col-lg-3 mb-2">
+          <div class="card p-3 dashboard-content-card" style="background-image: linear-gradient(278deg, #dc3586 0%, #000000 120%);
+              color: white;padding: 10px 30px;">
+            <div class="card-title">
+              <h4>Total Amount</h4>
+            </div>
+            <div>
+              <h1 style="font-size: 40px;font-weight:500;">17551</h1>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-6 col-lg-3 mb-2">
+          <div class="card p-3 dashboard-content-card" style="background: linear-gradient(90deg, rgba(239,96,162,1) 15%, rgba(243,155,148,1) 84%);
+              color: white;padding: 10px 30px;">
+            <div class="card-title">
+              <h4>Total No. of Users</h4>
+            </div>
+            <div>
+              <h1 style="font-size: 40px;font-weight:500;">20</h1>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-6 col-lg-3 mb-2">
+          <div class="card p-3 dashboard-content-card" style="background: linear-gradient(180deg, rgba(86,119,192,1) 0%, rgba(112,203,233,1) 100%);
+              color: white;padding: 10px 30px;">
+            <div class="card-title">
+              <h4>Total No. of Dishes</h4>
+            </div>
+            <div>
+              <h1 style="font-size: 40px;font-weight:500;">110</h1>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-6 col-lg-3 mb-2">
+          <div class="card p-3 dashboard-content-card" style="background: linear-gradient(141deg, rgba(5,105,140,1) 0%, rgba(4,63,91,1) 100%);
+              color: white;padding: 10px 30px;">
+            <div class="card-title">
+              <h4>Total No. of Tables</h4>
+            </div>
+            <div>
+              <h1 style="font-size: 40px;font-weight:500;">9</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,1790 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="navbar-header">
+        <div class="container-fluid pt-3">
+            <nav class="navbar navbar-expand-lg bg-body-tertiary d-flex align-items-center justify-content-between">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#"><img src="./assets/logo.png" alt="" /></a>
+                    <div class="" id="navbarSupportedContent">
+                        <div class="dropdown">
+                            <button class="dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                <img src="./assets/user.png" alt="" class="w-100 profile" />
+                            </button>
+                            <ul class="dropdown-menu box arrow-top">
+                                <div class="">
+                                    <div class="d-flex align-items-center">
+                                        <div>
+                                            <img src="./assets/user.png" alt="" class="w-100 profile" />
+                                        </div>
+                                        <div class="ms-3">
+                                            <h2 class="mb-0" style="line-height: 1">Abc</h2>
+                                            <small>abc@gmail.com</small>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex mt-3">
+                                        <label>Table No. :</label>
+                                        <strong class="d-inline-block ms-2">2</strong>
+                                    </div>
+                                    <div class="d-flex">
+                                        <label>Login date & time :</label>
+                                        <strong class="d-inline-block ms-2">12-10-2023</strong>
+                                        <strong class="d-inline-block ms-2">10:07 AM</strong>
+                                    </div>
+                                    <div class="text-end mt-4">
+                                        <button class="logoutbtn">Logout</button>
+                                    </div>
+                                </div>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <div class="ordercontent container-fluid">
+        <div class="row">
+            <div class="col-md-8 mt-2">
+                <div class="card order-card" style="width: 100%">
+                    <div class="card-body">
+                        <ul class="nav tabs nav-pills mb-3" id="pills-tab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill"
+                                    data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home"
+                                    aria-selected="true">
+                                    <div class="btncontent">
+                                        <img src="../public/assets/starters.svg" alt="" />&nbsp;Starters
+                                    </div>
+                                    <div class="activdeline"></div>
+                                </button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill"
+                                    data-bs-target="#pills-profile" type="button" role="tab"
+                                    aria-controls="pills-profile" aria-selected="false">
+                                    <div class="btncontent">
+                                        <img src="../public/assets/maingroup.svg" alt="" />&nbsp;Main Course
+                                    </div>
+                                    <div class="activdeline"></div>
+                                </button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill"
+                                    data-bs-target="#pills-contact" type="button" role="tab"
+                                    aria-controls="pills-contact" aria-selected="false">
+                                    <div>
+                                        <img src="../public/assets/deserts.svg" alt="" />&nbsp;Deserts
+                                    </div>
+
+                                    <div class="activdeline"></div>
+                                </button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="pills-disabled-tab" data-bs-toggle="pill"
+                                    data-bs-target="#pills-disabled" type="button" role="tab"
+                                    aria-controls="pills-disabled" aria-selected="false">
+                                    <div class="btncontent">
+                                        <img src="../public/assets/bevarages.svg" alt="" />
+
+                                        &nbsp;Beverages
+                                    </div>
+                                    <div class="activdeline"></div>
+                                </button>
+                            </li>
+                        </ul>
+                        <div class="tab-content" id="pills-tabContent">
+                            <div class="tab-pane fade show active" id="pills-home" role="tabpanel"
+                                aria-labelledby="pills-home-tab" tabindex="0">
+                                <div class="container-fluid">
+                                    <div class="row mt-4">
+                                        <div class="col-md-2 category-col">
+                                            <div class="row">
+                                                <div class="col-md-11">
+                                                    <div class="row d-flex justify-content-center">
+                                                        <img src="../public/assets/dish.png" alt=""
+                                                            class="category-img" />
+                                                    </div>
+                                                    <div class="row">
+                                                        <h3 style="
+                                  text-align: center;
+                                  padding: 0px;
+                                  font-size: 16px;
+                                  font-weight: 500;
+                                  cursor: pointer;
+                                ">
+                                                            Veg
+                                                        </h3>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-11">
+                                                    <div class="row d-flex justify-content-center">
+                                                        <img src="../public/assets/chicken-leg.png" alt=""
+                                                            class="category-img" />
+                                                    </div>
+                                                    <div class="row">
+                                                        <h3 style="
+                                  text-align: center;
+                                  padding: 0px;
+                                  font-size: 16px;
+                                  font-weight: 500;
+                                  cursor: pointer;
+                                ">
+                                                            Non-Veg
+                                                        </h3>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-10 itemListDiv">
+                                            <form>
+                                                <div class="row mb-3">
+                                                    <div class="col-md-6 col-lg-4 mt-3">
+                                                        <div class="flip-card" style="width: 75%">
+                                                            <div class="flip-card-inner">
+                                                                <div class="flip-card-front">
+                                                                    <div class="card-offer">
+                                                                        <h3 class="mb-0">20% off</h3>
+                                                                    </div>
+
+                                                                    <img src="../public/assets/NoPath - Copy (4)@2x.png"
+                                                                        class="items-img mt-4" />
+                                                                    <div
+                                                                        class="col-md-12 d-flex justify-content-center">
+                                                                        <h3 class="m-0 text-bold">Pakoda</h3>
+                                                                    </div>
+                                                                    <div class="col-md-12">
+                                                                        <p class="item-discription m-0">
+                                                                            Lorem ipsum dolor sit amet consectetur
+                                                                            adipisicing elit. Alias nobis quam ut
+                                                                            voluptatem maxime. Ad consequuntur
+                                                                            necessitatibus mollitia quisquam
+                                                                            exercitationem.
+                                                                        </p>
+                                                                        <p class="item-price m-0">
+                                                                            <span>₹20</span>
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="flip-card-back">
+                                                                    <div class="item-count">
+                                                                        <div class="input-group mb-3">
+                                                                            <span class="input-group-text"
+                                                                                style="cursor: pointer">-</span>
+                                                                            <input type="text"
+                                                                                class="form-control input-text-field"
+                                                                                readonly formControlName="foodCount" />
+                                                                            <span class="input-group-text"
+                                                                                style="cursor: pointer">+</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div
+                                                                        class="col-md-12 d-flex justify-content-center">
+                                                                        <h3 class="m-0 text-bold">Pakoda</h3>
+                                                                    </div>
+                                                                    <div class="col-md-12">
+                                                                        <p class="item-discription m-0">
+                                                                            Lorem ipsum dolor sit amet consectetur
+                                                                            adipisicing elit. Alias nobis quam ut
+                                                                            voluptatem maxime. Ad consequuntur
+                                                                            necessitatibus mollitia quisquam
+                                                                            exercitationem.
+                                                                        </p>
+                                                                        <p class="item-price m-0">
+                                                                            <span class="text-white"> ₹20</span>
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 col-lg-4 mt-3">
+                                                        <div class="flip-card" style="width: 75%">
+                                                            <div class="flip-card-inner">
+                                                                <div class="flip-card-front">
+                                                                    <div class="card-offer">
+                                                                        <h3 class="mb-0">20% off</h3>
+                                                                    </div>
+
+                                                                    <img src="../public/assets/NoPath - Copy (4)@2x.png"
+                                                                        class="items-img mt-4" />
+                                                                    <div
+                                                                        class="col-md-12 d-flex justify-content-center">
+                                                                        <h3 class="m-0 text-bold">Pakoda</h3>
+                                                                    </div>
+                                                                    <div class="col-md-12">
+                                                                        <p class="item-discription m-0">
+                                                                            Lorem ipsum dolor sit amet consectetur
+                                                                            adipisicing elit. Alias nobis quam ut
+                                                                            voluptatem maxime. Ad consequuntur
+                                                                            necessitatibus mollitia quisquam
+                                                                            exercitationem.
+                                                                        </p>
+                                                                        <p class="item-price m-0">
+                                                                            <span>₹20</span>
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="flip-card-back">
+                                                                    <div class="item-count">
+                                                                        <div class="input-group mb-3">
+                                                                            <span class="input-group-text"
+                                                                                style="cursor: pointer">-</span>
+                                                                            <input type="text"
+                                                                                class="form-control input-text-field"
+                                                                                readonly formControlName="foodCount" />
+                                                                            <span class="input-group-text"
+                                                                                style="cursor: pointer">+</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div
+                                                                        class="col-md-12 d-flex justify-content-center">
+                                                                        <h3 class="m-0 text-bold">Pakoda</h3>
+                                                                    </div>
+                                                                    <div class="col-md-12">
+                                                                        <p class="item-discription m-0">
+                                                                            Lorem ipsum dolor sit amet consectetur
+                                                                            adipisicing elit. Alias nobis quam ut
+                                                                            voluptatem maxime. Ad consequuntur
+                                                                            necessitatibus mollitia quisquam
+                                                                            exercitationem.
+                                                                        </p>
+                                                                        <p class="item-price m-0">
+                                                                            <span class="text-white"> ₹20</span>
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 col-lg-4 mt-3">
+                                                        <div class="flip-card" style="width: 75%">
+                                                            <div class="flip-card-inner">
+                                                                <div class="flip-card-front">
+                                                                    <div class="card-offer">
+                                                                        <h3 class="mb-0">20% off</h3>
+                                                                    </div>
+
+                                                                    <img src="../public/assets/NoPath - Copy (4)@2x.png"
+                                                                        class="items-img mt-4" />
+                                                                    <div
+                                                                        class="col-md-12 d-flex justify-content-center">
+                                                                        <h3 class="m-0 text-bold">Pakoda</h3>
+                                                                    </div>
+                                                                    <div class="col-md-12">
+                                                                        <p class="item-discription m-0">
+                                                                            Lorem ipsum dolor sit amet consectetur
+                                                                            adipisicing elit. Alias nobis quam ut
+                                                                            voluptatem maxime. Ad consequuntur
+                                                                            necessitatibus mollitia quisquam
+                                                                            exercitationem.
+                                                                        </p>
+                                                                        <p class="item-price m-0">
+                                                                            <span>₹20</span>
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="flip-card-back">
+                                                                    <div class="item-count">
+                                                                        <div class="input-group mb-3">
+                                                                            <span class="input-group-text"
+                                                                                style="cursor: pointer">-</span>
+                                                                            <input type="text"
+                                                                                class="form-control input-text-field"
+                                                                                readonly formControlName="foodCount" />
+                                                                            <span class="input-group-text"
+                                                                                style="cursor: pointer">+</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div
+                                                                        class="col-md-12 d-flex justify-content-center">
+                                                                        <h3 class="m-0 text-bold">Pakoda</h3>
+                                                                    </div>
+                                                                    <div class="col-md-12">
+                                                                        <p class="item-discription m-0">
+                                                                            Lorem ipsum dolor sit amet consectetur
+                                                                            adipisicing elit. Alias nobis quam ut
+                                                                            voluptatem maxime. Ad consequuntur
+                                                                            necessitatibus mollitia quisquam
+                                                                            exercitationem.
+                                                                        </p>
+                                                                        <p class="item-price m-0">
+                                                                            <span class="text-white"> ₹20</span>
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 col-lg-4 mt-3">
+                                                        <div class="flip-card" style="width: 75%">
+                                                            <div class="flip-card-inner">
+                                                                <div class="flip-card-front">
+                                                                    <div class="card-offer">
+                                                                        <h3 class="mb-0">20% off</h3>
+                                                                    </div>
+
+                                                                    <img src="../public/assets/NoPath - Copy (4)@2x.png"
+                                                                        class="items-img mt-4" />
+                                                                    <div
+                                                                        class="col-md-12 d-flex justify-content-center">
+                                                                        <h3 class="m-0 text-bold">Pakoda</h3>
+                                                                    </div>
+                                                                    <div class="col-md-12">
+                                                                        <p class="item-discription m-0">
+                                                                            Lorem ipsum dolor sit amet consectetur
+                                                                            adipisicing elit. Alias nobis quam ut
+                                                                            voluptatem maxime. Ad consequuntur
+                                                                            necessitatibus mollitia quisquam
+                                                                            exercitationem.
+                                                                        </p>
+                                                                        <p class="item-price m-0">
+                                                                            <span>₹20</span>
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="flip-card-back">
+                                                                    <div class="item-count">
+                                                                        <div class="input-group mb-3">
+                                                                            <span class="input-group-text"
+                                                                                style="cursor: pointer">-</span>
+                                                                            <input type="text"
+                                                                                class="form-control input-text-field"
+                                                                                readonly formControlName="foodCount" />
+                                                                            <span class="input-group-text"
+                                                                                style="cursor: pointer">+</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div
+                                                                        class="col-md-12 d-flex justify-content-center">
+                                                                        <h3 class="m-0 text-bold">Pakoda</h3>
+                                                                    </div>
+                                                                    <div class="col-md-12">
+                                                                        <p class="item-discription m-0">
+                                                                            Lorem ipsum dolor sit amet consectetur
+                                                                            adipisicing elit. Alias nobis quam ut
+                                                                            voluptatem maxime. Ad consequuntur
+                                                                            necessitatibus mollitia quisquam
+                                                                            exercitationem.
+                                                                        </p>
+                                                                        <p class="item-price m-0">
+                                                                            <span class="text-white"> ₹20</span>
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 col-lg-4 mt-3">
+                                                        <div class="flip-card" style="width: 75%">
+                                                            <div class="flip-card-inner">
+                                                                <div class="flip-card-front">
+                                                                    <div class="card-offer">
+                                                                        <h3 class="mb-0">20% off</h3>
+                                                                    </div>
+
+                                                                    <img src="../public/assets/NoPath - Copy (4)@2x.png"
+                                                                        class="items-img mt-4" />
+                                                                    <div
+                                                                        class="col-md-12 d-flex justify-content-center">
+                                                                        <h3 class="m-0 text-bold">Pakoda</h3>
+                                                                    </div>
+                                                                    <div class="col-md-12">
+                                                                        <p class="item-discription m-0">
+                                                                            Lorem ipsum dolor sit amet consectetur
+                                                                            adipisicing elit. Alias nobis quam ut
+                                                                            voluptatem maxime. Ad consequuntur
+                                                                            necessitatibus mollitia quisquam
+                                                                            exercitationem.
+                                                                        </p>
+                                                                        <p class="item-price m-0">
+                                                                            <span>₹20</span>
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="flip-card-back">
+                                                                    <div class="item-count">
+                                                                        <div class="input-group mb-3">
+                                                                            <span class="input-group-text"
+                                                                                style="cursor: pointer">-</span>
+                                                                            <input type="text"
+                                                                                class="form-control input-text-field"
+                                                                                readonly formControlName="foodCount" />
+                                                                            <span class="input-group-text"
+                                                                                style="cursor: pointer">+</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div
+                                                                        class="col-md-12 d-flex justify-content-center">
+                                                                        <h3 class="m-0 text-bold">Pakoda</h3>
+                                                                    </div>
+                                                                    <div class="col-md-12">
+                                                                        <p class="item-discription m-0">
+                                                                            Lorem ipsum dolor sit amet consectetur
+                                                                            adipisicing elit. Alias nobis quam ut
+                                                                            voluptatem maxime. Ad consequuntur
+                                                                            necessitatibus mollitia quisquam
+                                                                            exercitationem.
+                                                                        </p>
+                                                                        <p class="item-price m-0">
+                                                                            <span class="text-white"> ₹20</span>
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 col-lg-4 mt-3">
+                                                        <div class="flip-card" style="width: 75%">
+                                                            <div class="flip-card-inner">
+                                                                <div class="flip-card-front">
+                                                                    <div class="card-offer">
+                                                                        <h3 class="mb-0">20% off</h3>
+                                                                    </div>
+
+                                                                    <img src="../public/assets/NoPath - Copy (4)@2x.png"
+                                                                        class="items-img mt-4" />
+                                                                    <div
+                                                                        class="col-md-12 d-flex justify-content-center">
+                                                                        <h3 class="m-0 text-bold">Pakoda</h3>
+                                                                    </div>
+                                                                    <div class="col-md-12">
+                                                                        <p class="item-discription m-0">
+                                                                            Lorem ipsum dolor sit amet consectetur
+                                                                            adipisicing elit. Alias nobis quam ut
+                                                                            voluptatem maxime. Ad consequuntur
+                                                                            necessitatibus mollitia quisquam
+                                                                            exercitationem.
+                                                                        </p>
+                                                                        <p class="item-price m-0">
+                                                                            <span>₹20</span>
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="flip-card-back">
+                                                                    <div class="item-count">
+                                                                        <div class="input-group mb-3">
+                                                                            <span class="input-group-text"
+                                                                                style="cursor: pointer">-</span>
+                                                                            <input type="text"
+                                                                                class="form-control input-text-field"
+                                                                                readonly formControlName="foodCount" />
+                                                                            <span class="input-group-text"
+                                                                                style="cursor: pointer">+</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div
+                                                                        class="col-md-12 d-flex justify-content-center">
+                                                                        <h3 class="m-0 text-bold">Pakoda</h3>
+                                                                    </div>
+                                                                    <div class="col-md-12">
+                                                                        <p class="item-discription m-0">
+                                                                            Lorem ipsum dolor sit amet consectetur
+                                                                            adipisicing elit. Alias nobis quam ut
+                                                                            voluptatem maxime. Ad consequuntur
+                                                                            necessitatibus mollitia quisquam
+                                                                            exercitationem.
+                                                                        </p>
+                                                                        <p class="item-price m-0">
+                                                                            <span class="text-white"> ₹20</span>
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 col-lg-4 mt-3">
+                                                        <div class="flip-card" style="width: 75%">
+                                                            <div class="flip-card-inner">
+                                                                <div class="flip-card-front">
+                                                                    <div class="card-offer">
+                                                                        <h3 class="mb-0">20% off</h3>
+                                                                    </div>
+
+                                                                    <img src="../public/assets/NoPath - Copy (4)@2x.png"
+                                                                        class="items-img mt-4" />
+                                                                    <div
+                                                                        class="col-md-12 d-flex justify-content-center">
+                                                                        <h3 class="m-0 text-bold">Pakoda</h3>
+                                                                    </div>
+                                                                    <div class="col-md-12">
+                                                                        <p class="item-discription m-0">
+                                                                            Lorem ipsum dolor sit amet consectetur
+                                                                            adipisicing elit. Alias nobis quam ut
+                                                                            voluptatem maxime. Ad consequuntur
+                                                                            necessitatibus mollitia quisquam
+                                                                            exercitationem.
+                                                                        </p>
+                                                                        <p class="item-price m-0">
+                                                                            <span>₹20</span>
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="flip-card-back">
+                                                                    <div class="item-count">
+                                                                        <div class="input-group mb-3">
+                                                                            <span class="input-group-text"
+                                                                                style="cursor: pointer">-</span>
+                                                                            <input type="text"
+                                                                                class="form-control input-text-field"
+                                                                                readonly formControlName="foodCount" />
+                                                                            <span class="input-group-text"
+                                                                                style="cursor: pointer">+</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div
+                                                                        class="col-md-12 d-flex justify-content-center">
+                                                                        <h3 class="m-0 text-bold">Pakoda</h3>
+                                                                    </div>
+                                                                    <div class="col-md-12">
+                                                                        <p class="item-discription m-0">
+                                                                            Lorem ipsum dolor sit amet consectetur
+                                                                            adipisicing elit. Alias nobis quam ut
+                                                                            voluptatem maxime. Ad consequuntur
+                                                                            necessitatibus mollitia quisquam
+                                                                            exercitationem.
+                                                                        </p>
+                                                                        <p class="item-price m-0">
+                                                                            <span class="text-white"> ₹20</span>
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="pills-profile" role="tabpanel"
+                                aria-labelledby="pills-profile-tab" tabindex="0">
+                                <div class="container-fluid">
+                                    <div class="row mt-4">
+                                        <div class="col-md-2 category-col">
+                                            <div class="row">
+                                                <div class="col-md-11">
+                                                    <div class="row d-flex justify-content-center">
+                                                        <img src="../public/assets/dish.png" alt=""
+                                                            class="category-img" />
+                                                    </div>
+                                                    <div class="row">
+                                                        <h3 style="
+                                  text-align: center;
+                                  padding: 0px;
+                                  font-size: 16px;
+                                  font-weight: 500;
+                                  cursor: pointer;
+                                ">
+                                                            Veg
+                                                        </h3>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-11">
+                                                    <div class="row d-flex justify-content-center">
+                                                        <img src="../public/assets/chicken-leg.png" alt=""
+                                                            class="category-img" />
+                                                    </div>
+                                                    <div class="row">
+                                                        <h3 style="
+                                  text-align: center;
+                                  padding: 0px;
+                                  font-size: 16px;
+                                  font-weight: 500;
+                                  cursor: pointer;
+                                ">
+                                                            Non-Veg
+                                                        </h3>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-10 itemListDiv">
+                                            <form>
+                                                <div class="row mb-3">
+                                                    <div class="col-md-4 mt-3">
+                                                        <div class="flip-card" style="width: 75%">
+                                                            <div class="flip-card-inner">
+                                                                <div class="flip-card-front">
+                                                                    <div class="card-offer">
+                                                                        <h3 class="mb-0">20% off</h3>
+                                                                    </div>
+
+                                                                    <img src="../public/assets/NoPath - Copy (3)@2x.png"
+                                                                        class="items-img mt-4" />
+                                                                    <div
+                                                                        class="col-md-12 d-flex justify-content-center">
+                                                                        <h3 class="m-0 text-bold">Chapathi</h3>
+                                                                    </div>
+                                                                    <div class="col-md-12">
+                                                                        <p class="item-discription m-0">
+                                                                            Lorem ipsum dolor sit amet consectetur
+                                                                            adipisicing elit. Alias nobis quam ut
+                                                                            voluptatem maxime. Ad consequuntur
+                                                                            necessitatibus mollitia quisquam
+                                                                            exercitationem.
+                                                                        </p>
+                                                                        <p class="item-price m-0">
+                                                                            <span>₹40</span>
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="flip-card-back">
+                                                                    <div class="item-count">
+                                                                        <div class="input-group mb-3">
+                                                                            <span class="input-group-text"
+                                                                                style="cursor: pointer">-</span>
+                                                                            <input type="text"
+                                                                                class="form-control input-text-field"
+                                                                                readonly />
+                                                                            <span class="input-group-text"
+                                                                                style="cursor: pointer">+</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div
+                                                                        class="col-md-12 d-flex justify-content-center">
+                                                                        <h3 class="m-0 text-bold">Chapathi</h3>
+                                                                    </div>
+                                                                    <div class="col-md-12">
+                                                                        <p class="item-discription m-0">
+                                                                            Lorem ipsum dolor sit amet consectetur
+                                                                            adipisicing elit. Alias nobis quam ut
+                                                                            voluptatem maxime. Ad consequuntur
+                                                                            necessitatibus mollitia quisquam
+                                                                            exercitationem.
+                                                                        </p>
+                                                                        <p class="item-price m-0">
+                                                                            <span class="text-white"> ₹40</span>
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4 mt-3">
+                                                        <div class="flip-card" style="width: 75%">
+                                                            <div class="flip-card-inner">
+                                                                <div class="flip-card-front">
+                                                                    <div class="card-offer">
+                                                                        <h3 class="mb-0">20% off</h3>
+                                                                    </div>
+
+                                                                    <img src="../public/assets/NoPath - Copy (3)@2x.png"
+                                                                        class="items-img mt-4" />
+                                                                    <div
+                                                                        class="col-md-12 d-flex justify-content-center">
+                                                                        <h3 class="m-0 text-bold">Chapathi</h3>
+                                                                    </div>
+                                                                    <div class="col-md-12">
+                                                                        <p class="item-discription m-0">
+                                                                            Lorem ipsum dolor sit amet consectetur
+                                                                            adipisicing elit. Alias nobis quam ut
+                                                                            voluptatem maxime. Ad consequuntur
+                                                                            necessitatibus mollitia quisquam
+                                                                            exercitationem.
+                                                                        </p>
+                                                                        <p class="item-price m-0">
+                                                                            <span>₹40</span>
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="flip-card-back">
+                                                                    <div class="item-count">
+                                                                        <div class="input-group mb-3">
+                                                                            <span class="input-group-text"
+                                                                                style="cursor: pointer">-</span>
+                                                                            <input type="text"
+                                                                                class="form-control input-text-field"
+                                                                                readonly />
+                                                                            <span class="input-group-text"
+                                                                                style="cursor: pointer">+</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div
+                                                                        class="col-md-12 d-flex justify-content-center">
+                                                                        <h3 class="m-0 text-bold">Chapathi</h3>
+                                                                    </div>
+                                                                    <div class="col-md-12">
+                                                                        <p class="item-discription m-0">
+                                                                            Lorem ipsum dolor sit amet consectetur
+                                                                            adipisicing elit. Alias nobis quam ut
+                                                                            voluptatem maxime. Ad consequuntur
+                                                                            necessitatibus mollitia quisquam
+                                                                            exercitationem.
+                                                                        </p>
+                                                                        <p class="item-price m-0">
+                                                                            <span class="text-white"> ₹40</span>
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4 mt-3">
+                                                        <div class="flip-card" style="width: 75%">
+                                                            <div class="flip-card-inner">
+                                                                <div class="flip-card-front">
+                                                                    <div class="card-offer">
+                                                                        <h3 class="mb-0">20% off</h3>
+                                                                    </div>
+
+                                                                    <img src="../public/assets/NoPath - Copy (3)@2x.png"
+                                                                        class="items-img mt-4" />
+                                                                    <div
+                                                                        class="col-md-12 d-flex justify-content-center">
+                                                                        <h3 class="m-0 text-bold itemname">Chapathi</h3>
+                                                                    </div>
+                                                                    <div class="col-md-12">
+                                                                        <p class="item-discription m-0">
+                                                                            Lorem ipsum dolor sit amet consectetur
+                                                                            adipisicing elit. Alias nobis quam ut
+                                                                            voluptatem maxime. Ad consequuntur
+                                                                            necessitatibus mollitia quisquam
+                                                                            exercitationem.
+                                                                        </p>
+                                                                        <p class="item-price m-0">
+                                                                            <span>₹40</span>
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="flip-card-back">
+                                                                    <div class="item-count">
+                                                                        <div class="input-group mb-3">
+                                                                            <span class="input-group-text"
+                                                                                style="cursor: pointer">-</span>
+                                                                            <input type="text"
+                                                                                class="form-control input-text-field"
+                                                                                readonly />
+                                                                            <span class="input-group-text"
+                                                                                style="cursor: pointer">+</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div
+                                                                        class="col-md-12 d-flex justify-content-center">
+                                                                        <h3 class="m-0 text-bold itemname">Chapathi</h3>
+                                                                    </div>
+                                                                    <div class="col-md-12">
+                                                                        <p class="item-discription m-0">
+                                                                            Lorem ipsum dolor sit amet consectetur
+                                                                            adipisicing elit. Alias nobis quam ut
+                                                                            voluptatem maxime. Ad consequuntur
+                                                                            necessitatibus mollitia quisquam
+                                                                            exercitationem.
+                                                                        </p>
+                                                                        <p class="item-price m-0">
+                                                                            <span class="text-white"> ₹40</span>
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4 mt-3">
+                                                        <div class="flip-card" style="width: 75%">
+                                                            <div class="flip-card-inner">
+                                                                <div class="flip-card-front">
+                                                                    <div class="card-offer">
+                                                                        <h3 class="mb-0">20% off</h3>
+                                                                    </div>
+
+                                                                    <img src="../public/assets/NoPath - Copy (3)@2x.png"
+                                                                        class="items-img mt-4" />
+                                                                    <div
+                                                                        class="col-md-12 d-flex justify-content-center">
+                                                                        <h3 class="m-0 text-bold itemname">Chapathi</h3>
+                                                                    </div>
+                                                                    <div class="col-md-12">
+                                                                        <p class="item-discription m-0">
+                                                                            Lorem ipsum dolor sit amet consectetur
+                                                                            adipisicing elit. Alias nobis quam ut
+                                                                            voluptatem maxime. Ad consequuntur
+                                                                            necessitatibus mollitia quisquam
+                                                                            exercitationem.
+                                                                        </p>
+                                                                        <p class="item-price m-0">
+                                                                            <span>₹40</span>
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="flip-card-back">
+                                                                    <div class="item-count">
+                                                                        <div class="input-group mb-3">
+                                                                            <span class="input-group-text"
+                                                                                style="cursor: pointer">-</span>
+                                                                            <input type="text"
+                                                                                class="form-control input-text-field"
+                                                                                readonly />
+                                                                            <span class="input-group-text"
+                                                                                style="cursor: pointer">+</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div
+                                                                        class="col-md-12 d-flex justify-content-center">
+                                                                        <h3 class="m-0 text-bold itemname">Chapathi</h3>
+                                                                    </div>
+                                                                    <div class="col-md-12">
+                                                                        <p class="item-discription m-0">
+                                                                            Lorem ipsum dolor sit amet consectetur
+                                                                            adipisicing elit. Alias nobis quam ut
+                                                                            voluptatem maxime. Ad consequuntur
+                                                                            necessitatibus mollitia quisquam
+                                                                            exercitationem.
+                                                                        </p>
+                                                                        <p class="item-price m-0">
+                                                                            <span class="text-white"> ₹40</span>
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4 mt-3">
+                                                        <div class="flip-card" style="width: 75%">
+                                                            <div class="flip-card-inner">
+                                                                <div class="flip-card-front">
+                                                                    <div class="card-offer">
+                                                                        <h3 class="mb-0">20% off</h3>
+                                                                    </div>
+
+                                                                    <img src="../public/assets/NoPath - Copy (3)@2x.png"
+                                                                        class="items-img mt-4" />
+                                                                    <div
+                                                                        class="col-md-12 d-flex justify-content-center">
+                                                                        <h3 class="m-0 text-bold itemname">Chapathi</h3>
+                                                                    </div>
+                                                                    <div class="col-md-12">
+                                                                        <p class="item-discription m-0">
+                                                                            Lorem ipsum dolor sit amet consectetur
+                                                                            adipisicing elit. Alias nobis quam ut
+                                                                            voluptatem maxime. Ad consequuntur
+                                                                            necessitatibus mollitia quisquam
+                                                                            exercitationem.
+                                                                        </p>
+                                                                        <p class="item-price m-0">
+                                                                            <span>₹40</span>
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="flip-card-back">
+                                                                    <div class="item-count">
+                                                                        <div class="input-group mb-3">
+                                                                            <span class="input-group-text"
+                                                                                style="cursor: pointer">-</span>
+                                                                            <input type="text"
+                                                                                class="form-control input-text-field"
+                                                                                readonly />
+                                                                            <span class="input-group-text"
+                                                                                style="cursor: pointer">+</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div
+                                                                        class="col-md-12 d-flex justify-content-center">
+                                                                        <h3 class="m-0 text-bold itemname">Chapathi</h3>
+                                                                    </div>
+                                                                    <div class="col-md-12">
+                                                                        <p class="item-discription m-0">
+                                                                            Lorem ipsum dolor sit amet consectetur
+                                                                            adipisicing elit. Alias nobis quam ut
+                                                                            voluptatem maxime. Ad consequuntur
+                                                                            necessitatibus mollitia quisquam
+                                                                            exercitationem.
+                                                                        </p>
+                                                                        <p class="item-price m-0">
+                                                                            <span class="text-white"> ₹40</span>
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4 mt-3">
+                                                        <div class="flip-card" style="width: 75%">
+                                                            <div class="flip-card-inner">
+                                                                <div class="flip-card-front">
+                                                                    <div class="card-offer">
+                                                                        <h3 class="mb-0">20% off</h3>
+                                                                    </div>
+
+                                                                    <img src="../public/assets/NoPath - Copy (3)@2x.png"
+                                                                        class="items-img mt-4" />
+                                                                    <div
+                                                                        class="col-md-12 d-flex justify-content-center">
+                                                                        <h3 class="m-0 text-bold itemname">Chapathi</h3>
+                                                                    </div>
+                                                                    <div class="col-md-12">
+                                                                        <p class="item-discription m-0">
+                                                                            Lorem ipsum dolor sit amet consectetur
+                                                                            adipisicing elit. Alias nobis quam ut
+                                                                            voluptatem maxime. Ad consequuntur
+                                                                            necessitatibus mollitia quisquam
+                                                                            exercitationem.
+                                                                        </p>
+                                                                        <p class="item-price m-0">
+                                                                            <span>₹40</span>
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="flip-card-back">
+                                                                    <div class="item-count">
+                                                                        <div class="input-group mb-3">
+                                                                            <span class="input-group-text"
+                                                                                style="cursor: pointer">-</span>
+                                                                            <input type="text"
+                                                                                class="form-control input-text-field"
+                                                                                readonly />
+                                                                            <span class="input-group-text"
+                                                                                style="cursor: pointer">+</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div
+                                                                        class="col-md-12 d-flex justify-content-center">
+                                                                        <h3 class="m-0 text-bold itemname">Chapathi</h3>
+                                                                    </div>
+                                                                    <div class="col-md-12">
+                                                                        <p class="item-discription m-0">
+                                                                            Lorem ipsum dolor sit amet consectetur
+                                                                            adipisicing elit. Alias nobis quam ut
+                                                                            voluptatem maxime. Ad consequuntur
+                                                                            necessitatibus mollitia quisquam
+                                                                            exercitationem.
+                                                                        </p>
+                                                                        <p class="item-price m-0">
+                                                                            <span class="text-white"> ₹40</span>
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="pills-contact" role="tabpanel"
+                                aria-labelledby="pills-contact-tab" tabindex="0">
+                                <div class="container-fluid">
+                                    <div class="row mt-4">
+                                        <div class="col-md-12 itemListDiv pr-0">
+                                            <form>
+                                                <div class="row mb-3 ms-2">
+                                                    <div class="col-md-4 mt-3">
+                                                        <div class="flip-card" style="width: 75%">
+                                                            <div class="flip-card-inner">
+                                                                <div class="flip-card-front">
+                                                                    <div class="card-offer">
+                                                                        <h3 class="mb-0">20% off</h3>
+                                                                    </div>
+
+                                                                    <img src="../public/assets/NoPath - Copy (4)@2x.png"
+                                                                        class="items-img mt-4" />
+                                                                    <div
+                                                                        class="col-md-12 d-flex justify-content-center">
+                                                                        <h3 class="m-0 text-bold itemname">Venila</h3>
+                                                                    </div>
+                                                                    <div class="col-md-12">
+                                                                        <p class="item-discription m-0">
+                                                                            Lorem ipsum dolor sit amet, consectetur
+                                                                            adipisicing elit. Cupiditate explicabo
+                                                                            eaque vitae tenetur nisi facere
+                                                                            veritatis. Quae ipsam vero sit.
+                                                                        </p>
+                                                                        <p class="item-price m-0">
+                                                                            <span>₹20</span>
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="flip-card-back">
+                                                                    <div class="item-count">
+                                                                        <div class="input-group mb-3">
+                                                                            <span class="input-group-text"
+                                                                                style="cursor: pointer">-</span>
+                                                                            <input type="text"
+                                                                                class="form-control input-text-field" />
+                                                                            <span class="input-group-text"
+                                                                                style="cursor: pointer">+</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div
+                                                                        class="col-md-12 d-flex justify-content-center">
+                                                                        <h3 class="m-0 text-bold itemname">Venila</h3>
+                                                                    </div>
+                                                                    <div class="col-md-12">
+                                                                        <p class="item-discription m-0">
+                                                                            Lorem ipsum dolor sit amet consectetur
+                                                                            adipisicing elit. Eos reprehenderit
+                                                                            sint, nesciunt nisi repellendus ipsam
+                                                                            laudantium expedita facere aspernatur
+                                                                            rerum.
+                                                                        </p>
+                                                                        <p class="item-price m-0">
+                                                                            <span class="text-white"> ₹20</span>
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4 mt-3">
+                                                        <div class="flip-card" style="width: 75%">
+                                                            <div class="flip-card-inner">
+                                                                <div class="flip-card-front">
+                                                                    <div class="card-offer">
+                                                                        <h3 class="mb-0">20% off</h3>
+                                                                    </div>
+
+                                                                    <img src="../public/assets/NoPath - Copy (4)@2x.png"
+                                                                        class="items-img mt-4" />
+                                                                    <div
+                                                                        class="col-md-12 d-flex justify-content-center">
+                                                                        <h3 class="m-0 text-bold itemname">Venila</h3>
+                                                                    </div>
+                                                                    <div class="col-md-12">
+                                                                        <p class="item-discription m-0">
+                                                                            Lorem ipsum dolor sit amet, consectetur
+                                                                            adipisicing elit. Cupiditate explicabo
+                                                                            eaque vitae tenetur nisi facere
+                                                                            veritatis. Quae ipsam vero sit.
+                                                                        </p>
+                                                                        <p class="item-price m-0">
+                                                                            <span>₹20</span>
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="flip-card-back">
+                                                                    <div class="item-count">
+                                                                        <div class="input-group mb-3">
+                                                                            <span class="input-group-text"
+                                                                                style="cursor: pointer">-</span>
+                                                                            <input type="text"
+                                                                                class="form-control input-text-field" />
+                                                                            <span class="input-group-text"
+                                                                                style="cursor: pointer">+</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div
+                                                                        class="col-md-12 d-flex justify-content-center">
+                                                                        <h3 class="m-0 text-bold itemname">Venila</h3>
+                                                                    </div>
+                                                                    <div class="col-md-12">
+                                                                        <p class="item-discription m-0">
+                                                                            Lorem ipsum dolor sit amet consectetur
+                                                                            adipisicing elit. Eos reprehenderit
+                                                                            sint, nesciunt nisi repellendus ipsam
+                                                                            laudantium expedita facere aspernatur
+                                                                            rerum.
+                                                                        </p>
+                                                                        <p class="item-price m-0">
+                                                                            <span class="text-white"> ₹20</span>
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4 mt-3">
+                                                        <div class="flip-card" style="width: 75%">
+                                                            <div class="flip-card-inner">
+                                                                <div class="flip-card-front">
+                                                                    <div class="card-offer">
+                                                                        <h3 class="mb-0">20% off</h3>
+                                                                    </div>
+
+                                                                    <img src="../public/assets/NoPath - Copy (4)@2x.png"
+                                                                        class="items-img mt-4" />
+                                                                    <div
+                                                                        class="col-md-12 d-flex justify-content-center">
+                                                                        <h3 class="m-0 text-bold itemname">Venila</h3>
+                                                                    </div>
+                                                                    <div class="col-md-12">
+                                                                        <p class="item-discription m-0">
+                                                                            Lorem ipsum dolor sit amet, consectetur
+                                                                            adipisicing elit. Cupiditate explicabo
+                                                                            eaque vitae tenetur nisi facere
+                                                                            veritatis. Quae ipsam vero sit.
+                                                                        </p>
+                                                                        <p class="item-price m-0">
+                                                                            <span>₹20</span>
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="flip-card-back">
+                                                                    <div class="item-count">
+                                                                        <div class="input-group mb-3">
+                                                                            <span class="input-group-text"
+                                                                                style="cursor: pointer">-</span>
+                                                                            <input type="text"
+                                                                                class="form-control input-text-field" />
+                                                                            <span class="input-group-text"
+                                                                                style="cursor: pointer">+</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div
+                                                                        class="col-md-12 d-flex justify-content-center">
+                                                                        <h3 class="m-0 text-bold itemname">Venila</h3>
+                                                                    </div>
+                                                                    <div class="col-md-12">
+                                                                        <p class="item-discription m-0">
+                                                                            Lorem ipsum dolor sit amet consectetur
+                                                                            adipisicing elit. Eos reprehenderit
+                                                                            sint, nesciunt nisi repellendus ipsam
+                                                                            laudantium expedita facere aspernatur
+                                                                            rerum.
+                                                                        </p>
+                                                                        <p class="item-price m-0">
+                                                                            <span class="text-white"> ₹20</span>
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4 mt-3">
+                                                        <div class="flip-card" style="width: 75%">
+                                                            <div class="flip-card-inner">
+                                                                <div class="flip-card-front">
+                                                                    <div class="card-offer">
+                                                                        <h3 class="mb-0">20% off</h3>
+                                                                    </div>
+
+                                                                    <img src="../public/assets/NoPath - Copy (4)@2x.png"
+                                                                        class="items-img mt-4" />
+                                                                    <div
+                                                                        class="col-md-12 d-flex justify-content-center">
+                                                                        <h3 class="m-0 text-bold itemname">Venila</h3>
+                                                                    </div>
+                                                                    <div class="col-md-12">
+                                                                        <p class="item-discription m-0">
+                                                                            Lorem ipsum dolor sit amet, consectetur
+                                                                            adipisicing elit. Cupiditate explicabo
+                                                                            eaque vitae tenetur nisi facere
+                                                                            veritatis. Quae ipsam vero sit.
+                                                                        </p>
+                                                                        <p class="item-price m-0">
+                                                                            <span>₹20</span>
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="flip-card-back">
+                                                                    <div class="item-count">
+                                                                        <div class="input-group mb-3">
+                                                                            <span class="input-group-text"
+                                                                                style="cursor: pointer">-</span>
+                                                                            <input type="text"
+                                                                                class="form-control input-text-field" />
+                                                                            <span class="input-group-text"
+                                                                                style="cursor: pointer">+</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div
+                                                                        class="col-md-12 d-flex justify-content-center">
+                                                                        <h3 class="m-0 text-bold itemname">Venila</h3>
+                                                                    </div>
+                                                                    <div class="col-md-12">
+                                                                        <p class="item-discription m-0">
+                                                                            Lorem ipsum dolor sit amet consectetur
+                                                                            adipisicing elit. Eos reprehenderit
+                                                                            sint, nesciunt nisi repellendus ipsam
+                                                                            laudantium expedita facere aspernatur
+                                                                            rerum.
+                                                                        </p>
+                                                                        <p class="item-price m-0">
+                                                                            <span class="text-white"> ₹20</span>
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4 mt-3">
+                                                        <div class="flip-card" style="width: 75%">
+                                                            <div class="flip-card-inner">
+                                                                <div class="flip-card-front">
+                                                                    <div class="card-offer">
+                                                                        <h3 class="mb-0">20% off</h3>
+                                                                    </div>
+
+                                                                    <img src="../public/assets/NoPath - Copy (4)@2x.png"
+                                                                        class="items-img mt-4" />
+                                                                    <div
+                                                                        class="col-md-12 d-flex justify-content-center">
+                                                                        <h3 class="m-0 text-bold itemname">Venila</h3>
+                                                                    </div>
+                                                                    <div class="col-md-12">
+                                                                        <p class="item-discription m-0">
+                                                                            Lorem ipsum dolor sit amet, consectetur
+                                                                            adipisicing elit. Cupiditate explicabo
+                                                                            eaque vitae tenetur nisi facere
+                                                                            veritatis. Quae ipsam vero sit.
+                                                                        </p>
+                                                                        <p class="item-price m-0">
+                                                                            <span>₹20</span>
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="flip-card-back">
+                                                                    <div class="item-count">
+                                                                        <div class="input-group mb-3">
+                                                                            <span class="input-group-text"
+                                                                                style="cursor: pointer">-</span>
+                                                                            <input type="text"
+                                                                                class="form-control input-text-field" />
+                                                                            <span class="input-group-text"
+                                                                                style="cursor: pointer">+</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div
+                                                                        class="col-md-12 d-flex justify-content-center">
+                                                                        <h3 class="m-0 text-bold itemname">Venila</h3>
+                                                                    </div>
+                                                                    <div class="col-md-12">
+                                                                        <p class="item-discription m-0">
+                                                                            Lorem ipsum dolor sit amet consectetur
+                                                                            adipisicing elit. Eos reprehenderit
+                                                                            sint, nesciunt nisi repellendus ipsam
+                                                                            laudantium expedita facere aspernatur
+                                                                            rerum.
+                                                                        </p>
+                                                                        <p class="item-price m-0">
+                                                                            <span class="text-white"> ₹20</span>
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4 mt-3">
+                                                        <div class="flip-card" style="width: 75%">
+                                                            <div class="flip-card-inner">
+                                                                <div class="flip-card-front">
+                                                                    <div class="card-offer">
+                                                                        <h3 class="mb-0">20% off</h3>
+                                                                    </div>
+
+                                                                    <img src="../public/assets/NoPath - Copy (4)@2x.png"
+                                                                        class="items-img mt-4" />
+                                                                    <div
+                                                                        class="col-md-12 d-flex justify-content-center">
+                                                                        <h3 class="m-0 text-bold itemname">Venila</h3>
+                                                                    </div>
+                                                                    <div class="col-md-12">
+                                                                        <p class="item-discription m-0">
+                                                                            Lorem ipsum dolor sit amet, consectetur
+                                                                            adipisicing elit. Cupiditate explicabo
+                                                                            eaque vitae tenetur nisi facere
+                                                                            veritatis. Quae ipsam vero sit.
+                                                                        </p>
+                                                                        <p class="item-price m-0">
+                                                                            <span>₹20</span>
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="flip-card-back">
+                                                                    <div class="item-count">
+                                                                        <div class="input-group mb-3">
+                                                                            <span class="input-group-text"
+                                                                                style="cursor: pointer">-</span>
+                                                                            <input type="text"
+                                                                                class="form-control input-text-field" />
+                                                                            <span class="input-group-text"
+                                                                                style="cursor: pointer">+</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div
+                                                                        class="col-md-12 d-flex justify-content-center">
+                                                                        <h3 class="m-0 text-bold itemname">Venila</h3>
+                                                                    </div>
+                                                                    <div class="col-md-12">
+                                                                        <p class="item-discription m-0">
+                                                                            Lorem ipsum dolor sit amet consectetur
+                                                                            adipisicing elit. Eos reprehenderit
+                                                                            sint, nesciunt nisi repellendus ipsam
+                                                                            laudantium expedita facere aspernatur
+                                                                            rerum.
+                                                                        </p>
+                                                                        <p class="item-price m-0">
+                                                                            <span class="text-white"> ₹20</span>
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="pills-disabled" role="tabpanel"
+                                aria-labelledby="pills-disabled-tab" tabindex="0">
+                                <div class="container-fluid">
+                                    <div class="row mt-4">
+                                        <div class="col-md-12 itemListDiv pr-0">
+                                            <form>
+                                                <div class="row mb-3 ms-2">
+                                                    <div class="col-md-4 mt-3">
+                                                        <div class="flip-card" style="width: 75%">
+                                                            <div class="flip-card-inner">
+                                                                <div class="flip-card-front">
+                                                                    <div class="card-offer">
+                                                                        <h3 class="mb-0">20% off</h3>
+                                                                    </div>
+
+                                                                    <img src="../public/assets/NoPath - Copy (3)@2x.png"
+                                                                        class="items-img mt-4" />
+                                                                    <div
+                                                                        class="col-md-12 d-flex justify-content-center">
+                                                                        <h3 class="m-0 text-bold itemname">Apple</h3>
+                                                                    </div>
+                                                                    <div class="col-md-12">
+                                                                        <p class="item-discription m-0">
+                                                                            Lorem ipsum, dolor sit amet consectetur
+                                                                            adipisicing elit. Tenetur, blanditiis
+                                                                            aliquam similique adipisci ipsum nam
+                                                                            quos corrupti assumenda placeat vel.
+                                                                        </p>
+                                                                        <p class="item-price m-0">
+                                                                            <span>₹40</span>
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="flip-card-back">
+                                                                    <div class="item-count">
+                                                                        <div class="input-group mb-3">
+                                                                            <span class="input-group-text"
+                                                                                style="cursor: pointer">-</span>
+                                                                            <input type="text"
+                                                                                class="form-control input-text-field" />
+                                                                            <span class="input-group-text"
+                                                                                style="cursor: pointer">+</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div
+                                                                        class="col-md-12 d-flex justify-content-center">
+                                                                        <h3 class="m-0 text-bold itemname">Apple</h3>
+                                                                    </div>
+                                                                    <div class="col-md-12">
+                                                                        <p class="item-discription m-0">
+                                                                            Lorem ipsum dolor sit, amet consectetur
+                                                                            adipisicing elit. Quae hic debitis,
+                                                                            quaerat modi facilis ut in est quidem
+                                                                            animi corrupti.
+                                                                        </p>
+                                                                        <p class="item-price m-0">
+                                                                            <span class="text-white"> ₹40</span>
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4 mt-3">
+                                                        <div class="flip-card" style="width: 75%">
+                                                            <div class="flip-card-inner">
+                                                                <div class="flip-card-front">
+                                                                    <div class="card-offer">
+                                                                        <h3 class="mb-0">20% off</h3>
+                                                                    </div>
+
+                                                                    <img src="../public/assets/NoPath - Copy (3)@2x.png"
+                                                                        class="items-img mt-4" />
+                                                                    <div
+                                                                        class="col-md-12 d-flex justify-content-center">
+                                                                        <h3 class="m-0 text-bold itemname">Apple</h3>
+                                                                    </div>
+                                                                    <div class="col-md-12">
+                                                                        <p class="item-discription m-0">
+                                                                            Lorem ipsum, dolor sit amet consectetur
+                                                                            adipisicing elit. Tenetur, blanditiis
+                                                                            aliquam similique adipisci ipsum nam
+                                                                            quos corrupti assumenda placeat vel.
+                                                                        </p>
+                                                                        <p class="item-price m-0">
+                                                                            <span>₹40</span>
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="flip-card-back">
+                                                                    <div class="item-count">
+                                                                        <div class="input-group mb-3">
+                                                                            <span class="input-group-text"
+                                                                                style="cursor: pointer">-</span>
+                                                                            <input type="text"
+                                                                                class="form-control input-text-field" />
+                                                                            <span class="input-group-text"
+                                                                                style="cursor: pointer">+</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div
+                                                                        class="col-md-12 d-flex justify-content-center">
+                                                                        <h3 class="m-0 text-bold itemname">Apple</h3>
+                                                                    </div>
+                                                                    <div class="col-md-12">
+                                                                        <p class="item-discription m-0">
+                                                                            Lorem ipsum dolor sit, amet consectetur
+                                                                            adipisicing elit. Quae hic debitis,
+                                                                            quaerat modi facilis ut in est quidem
+                                                                            animi corrupti.
+                                                                        </p>
+                                                                        <p class="item-price m-0">
+                                                                            <span class="text-white"> ₹40</span>
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4 mt-3">
+                                                        <div class="flip-card" style="width: 75%">
+                                                            <div class="flip-card-inner">
+                                                                <div class="flip-card-front">
+                                                                    <div class="card-offer">
+                                                                        <h3 class="mb-0">20% off</h3>
+                                                                    </div>
+
+                                                                    <img src="../public/assets/NoPath - Copy (3)@2x.png"
+                                                                        class="items-img mt-4" />
+                                                                    <div
+                                                                        class="col-md-12 d-flex justify-content-center">
+                                                                        <h3 class="m-0 text-bold itemname">Apple</h3>
+                                                                    </div>
+                                                                    <div class="col-md-12">
+                                                                        <p class="item-discription m-0">
+                                                                            Lorem ipsum, dolor sit amet consectetur
+                                                                            adipisicing elit. Tenetur, blanditiis
+                                                                            aliquam similique adipisci ipsum nam
+                                                                            quos corrupti assumenda placeat vel.
+                                                                        </p>
+                                                                        <p class="item-price m-0">
+                                                                            <span>₹40</span>
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="flip-card-back">
+                                                                    <div class="item-count">
+                                                                        <div class="input-group mb-3">
+                                                                            <span class="input-group-text"
+                                                                                style="cursor: pointer">-</span>
+                                                                            <input type="text"
+                                                                                class="form-control input-text-field" />
+                                                                            <span class="input-group-text"
+                                                                                style="cursor: pointer">+</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div
+                                                                        class="col-md-12 d-flex justify-content-center">
+                                                                        <h3 class="m-0 text-bold itemname">Apple</h3>
+                                                                    </div>
+                                                                    <div class="col-md-12">
+                                                                        <p class="item-discription m-0">
+                                                                            Lorem ipsum dolor sit, amet consectetur
+                                                                            adipisicing elit. Quae hic debitis,
+                                                                            quaerat modi facilis ut in est quidem
+                                                                            animi corrupti.
+                                                                        </p>
+                                                                        <p class="item-price m-0">
+                                                                            <span class="text-white"> ₹40</span>
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4 mt-3">
+                                                        <div class="flip-card" style="width: 75%">
+                                                            <div class="flip-card-inner">
+                                                                <div class="flip-card-front">
+                                                                    <div class="card-offer">
+                                                                        <h3 class="mb-0">20% off</h3>
+                                                                    </div>
+
+                                                                    <img src="../public/assets/NoPath - Copy (3)@2x.png"
+                                                                        class="items-img mt-4" />
+                                                                    <div
+                                                                        class="col-md-12 d-flex justify-content-center">
+                                                                        <h3 class="m-0 text-bold itemname">Apple</h3>
+                                                                    </div>
+                                                                    <div class="col-md-12">
+                                                                        <p class="item-discription m-0">
+                                                                            Lorem ipsum, dolor sit amet consectetur
+                                                                            adipisicing elit. Tenetur, blanditiis
+                                                                            aliquam similique adipisci ipsum nam
+                                                                            quos corrupti assumenda placeat vel.
+                                                                        </p>
+                                                                        <p class="item-price m-0">
+                                                                            <span>₹40</span>
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="flip-card-back">
+                                                                    <div class="item-count">
+                                                                        <div class="input-group mb-3">
+                                                                            <span class="input-group-text"
+                                                                                style="cursor: pointer">-</span>
+                                                                            <input type="text"
+                                                                                class="form-control input-text-field" />
+                                                                            <span class="input-group-text"
+                                                                                style="cursor: pointer">+</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div
+                                                                        class="col-md-12 d-flex justify-content-center">
+                                                                        <h3 class="m-0 text-bold itemname">Apple</h3>
+                                                                    </div>
+                                                                    <div class="col-md-12">
+                                                                        <p class="item-discription m-0">
+                                                                            Lorem ipsum dolor sit, amet consectetur
+                                                                            adipisicing elit. Quae hic debitis,
+                                                                            quaerat modi facilis ut in est quidem
+                                                                            animi corrupti.
+                                                                        </p>
+                                                                        <p class="item-price m-0">
+                                                                            <span class="text-white"> ₹40</span>
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4 mt-3">
+                                                        <div class="flip-card" style="width: 75%">
+                                                            <div class="flip-card-inner">
+                                                                <div class="flip-card-front">
+                                                                    <div class="card-offer">
+                                                                        <h3 class="mb-0">20% off</h3>
+                                                                    </div>
+
+                                                                    <img src="../public/assets/NoPath - Copy (3)@2x.png"
+                                                                        class="items-img mt-4" />
+                                                                    <div
+                                                                        class="col-md-12 d-flex justify-content-center">
+                                                                        <h3 class="m-0 text-bold itemname">Apple</h3>
+                                                                    </div>
+                                                                    <div class="col-md-12">
+                                                                        <p class="item-discription m-0">
+                                                                            Lorem ipsum, dolor sit amet consectetur
+                                                                            adipisicing elit. Tenetur, blanditiis
+                                                                            aliquam similique adipisci ipsum nam
+                                                                            quos corrupti assumenda placeat vel.
+                                                                        </p>
+                                                                        <p class="item-price m-0">
+                                                                            <span>₹40</span>
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="flip-card-back">
+                                                                    <div class="item-count">
+                                                                        <div class="input-group mb-3">
+                                                                            <span class="input-group-text"
+                                                                                style="cursor: pointer">-</span>
+                                                                            <input type="text"
+                                                                                class="form-control input-text-field" />
+                                                                            <span class="input-group-text"
+                                                                                style="cursor: pointer">+</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div
+                                                                        class="col-md-12 d-flex justify-content-center">
+                                                                        <h3 class="m-0 text-bold itemname">Apple</h3>
+                                                                    </div>
+                                                                    <div class="col-md-12">
+                                                                        <p class="item-discription m-0">
+                                                                            Lorem ipsum dolor sit, amet consectetur
+                                                                            adipisicing elit. Quae hic debitis,
+                                                                            quaerat modi facilis ut in est quidem
+                                                                            animi corrupti.
+                                                                        </p>
+                                                                        <p class="item-price m-0">
+                                                                            <span class="text-white"> ₹40</span>
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="col-md-12 d-flex container-fluid w-100 h-100">
+                    <div class="col-md-12">
+                        <div class="card ordercard mt-2">
+                            <p class="ordersHeading">Order Preview</p>
+                            <div class="newinner">
+                                <div class="d-none">
+                                    <div class="previewText mt-5">
+                                        Please place your food order.
+                                    </div>
+                                </div>
+                                <div class="innerCard">
+                                    <div>
+                                        <div class="d-flex justify-content-between mr-1">
+                                            <p class="dishName">Pakoda</p>
+                                            <div>
+                                                <button class="minubtn btn p-0">
+                                                    <i class="fa fa-trash-o" aria-hidden="true"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <p class="dishDescription">
+                                            Lorem ipsum dolor sit, amet consectetur adipisicing
+                                            elit. Accusantium, consequatur aliquid atque velit
+                                            suscipit necessitatibus expedita vel tempore earum
+                                            dicta.
+                                        </p>
+                                    </div>
+                                    <div class="numbercount">
+                                        <div class="d-flex justify-content-around">
+                                            <div>
+                                                <button class="minubtn btn p-0">
+                                                    <i class="fa fa-minus mt-2" aria-hidden="true"></i>
+                                                </button>
+                                            </div>
+                                            <div class="mt-1">1</div>
+                                            <div>
+                                                <button class="minubtn btn p-0">
+                                                    <i class="fa fa-plus mt-2" aria-hidden="true"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="dishPrice">₹ 20</div>
+                                </div>
+                            </div>
+                            <div class="paymentdetails">
+                                <div class="subtotal">
+                                    <p>Sub Total</p>
+                                    <p>40</p>
+                                </div>
+                                <div class="serviceCharge">
+                                    <p>Service Charges</p>
+                                    <p>₹ 10</p>
+                                </div>
+                                <div class="subtotal mt-4" id="totalPayables">
+                                    <p>Total Payables</p>
+                                    <p>₹ 50</p>
+                                </div>
+
+                                <button class="paynowBtn btn">Proceed</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="cardContainer"></div>
+
+    <script>
+const menuItems = [{
+            "_id": "item01",
+            "name": "chicken lollipop",
+            "category": "starter",
+            "subCategory": "nonveg",
+            "status": "unavailable",
+            "description": "Chicken lollipop is a popular dish",
+            "imgPath": "local image path",
+            "price": 250,
+           
+        },
+        {
+            "_id": "item02",
+            "name": "chicken lollipop",
+            "category": "starter",
+            "subCategory": "nonveg",
+            "status": "unavailable",
+            "description": "Chicken lollipop is a popular dish",
+            "imgPath": "local image path",
+            "price": 350,
+           
+        },
+        {
+            "_id": "item03",
+            "name": "chicken lollipop",
+            "category": "starter",
+            "subCategory": "nonveg",
+            "status": "unavailable",
+            "description": "Chicken lollipop is a popular dish",
+            "imgPath": "local image path",
+            "price": 50,
+           
+        }
+    ]
+
+
+const cardContainer = document.getElementById('cardContainer');
+
+menuItems.forEach(item => {
+    const cards = document.createElement('div');
+    cards.className = 'col-md-4 mt-3';
+    cards.innerHTML = `
+        <div class="flip-card1" style="width: 75%">
+            <div class="flip-card-inner">
+                <div class="flip-card-front1">
+                    <div class="card-offer1">
+                        <h3 class="mb-0">${item.offer}</h3>
+                    </div>
+                    <img src="${item.imgSrc}" class="items-img mt-4" />
+                    <div class="col-md-12 d-flex justify-content-center">
+                        <h3 class="m-0 text-bold1">${item.name}</h3>
+                    </div>
+                    <div class="col-md-12">
+                        <p class="item-description1 m-0">${item.description}</p>
+                        <p class="item-price1 m-0">
+                            <span>${item.price}</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    `;
+
+    cardContainer.appendChild(cards);
+});
+
+
+function getTotalPrice() {
+      // Calculate the total payables
+      const subTotal = 40;
+      const serviceCharge = 10;
+      const totalPayables = subTotal + serviceCharge;
+
+      // Update the total payables displayed on the page
+      const totalPayablesElement = document.getElementById('totalPayables');
+      if (totalPayablesElement) {
+        totalPayablesElement.innerHTML = `<p>Total Payables</p><p>₹ ${totalPayables}</p>`;
+      }
+    }
+    </script>
+</body>
+
+</html>

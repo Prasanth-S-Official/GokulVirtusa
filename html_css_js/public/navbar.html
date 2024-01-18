@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="./style.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div class="navbar-header">
+    <div class="container-fluid pt-3">
+      <nav class="navbar navbar-expand-lg bg-body-tertiary d-flex align-items-center justify-content-between">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"><img src="./assets/logo.png" alt=""></a>
+          <div class="" id="navbarSupportedContent">
+            <div class="dropdown">
+              <button class=" dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <img src="./assets/user.png" alt="" class="w-100 profile">
+              </button>
+              <ul class="dropdown-menu box arrow-top">
+                <div class="">
+                  <div class="d-flex align-items-center">
+                    <div>
+                      <img src="./assets/user.png" alt="" class="w-100 profile">
+                    </div>
+                    <div class="ms-3">
+                      <h2 class="mb-0" style="line-height: 1;">Abc</h2>
+                      <small>abc@gmail.com</small>
+                    </div>
+                  </div>
+                  <div class="d-flex mt-3">
+                    <label>Table No. :</label>
+                    <strong class="d-inline-block ms-2">2</strong>
+                  </div>
+                  <div class="d-flex">
+                    <label>Login date & time :</label>
+                    <strong class=" datetext d-inline-block ms-2">12-10-2023</strong>
+                    <strong class=" timetext d-inline-block ms-2">10:07 AM</strong>
+                  </div>
+                  <div class="text-end mt-4">
+                    <button class="logoutbtn">Logout</button>
+
+                  </div>
+                </div>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </nav>
+    </div>
+  </div>
+
+
+
+  <script>
+    function getCurrentDateTime() {
+      const now = new Date();
+
+      // Format the date as "dd-mm-yyyy"
+      const day = String(now.getDate()).padStart(2, '0');
+      const month = String(now.getMonth() + 1).padStart(2, '0'); // Months are zero-based
+      const year = now.getFullYear();
+
+      const formattedDate = `${day}-${month}-${year}`;
+
+      // Format the time as "h:mm AM/PM" (12-hour clock)
+      const hours = String(now.getHours() % 12 || 12).padStart(2, '0'); // Convert to 12-hour format
+      const minutes = String(now.getMinutes()).padStart(2, '0');
+      const period = now.getHours() < 12 ? 'AM' : 'PM';
+
+      const formattedTime = `${hours}:${minutes} ${period}`;
+
+      return { date: formattedDate, time: formattedTime };
+    }
+
+    const currentDateTime = getCurrentDateTime();
+    const dateElement = document.querySelector('.datetext');
+    const timeElement = document.querySelector('.timetext');
+
+    dateElement.textContent = currentDateTime.date;
+    timeElement.textContent = currentDateTime.time
+  </script>
+</body>
+
+</html>
