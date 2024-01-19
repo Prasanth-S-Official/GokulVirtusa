@@ -225,3 +225,12 @@ inputOrder {
 		width: 100% !important;
 	}
 }
+
+
+.logoutbutton{
+	float: right;
+	padding: 10px;
+	border-radius: 5px;
+	background-color: #236bae;
+	color:white
+}
