@@ -129,12 +129,43 @@ label {
 }
 
 
-@media only screen and (max-width:375px) {
+/* @media only screen and (max-width:375px) {
   .login {
     padding: 50px 15px;
   }
+} */
+
+/* Media query for screens up to 375px */
+@media only screen and (max-width: 375px) {
+  .login {
+    padding: 50px 15px;
+    font-size: 14px;
+  }
 }
 
+/* Media query for screens between 376px and 767px */
+@media only screen and (min-width: 376px) and (max-width: 767px) {
+  .login {
+    padding: 30px 10px;
+    font-size: 16px;
+  }
+}
+
+/* Media query for screens between 768px and 1023px */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .login {
+    padding: 40px 20px;
+    font-size: 29px;
+  }
+}
+
+/* Media query for screens 1024px and above */
+@media only screen and (min-width: 1024px) {
+  .login {
+    padding: 50px 30px;
+    font-size: 20px;
+  }
+} */
 
 /* admin dashboard page CSS   */
 .dashboard-card {

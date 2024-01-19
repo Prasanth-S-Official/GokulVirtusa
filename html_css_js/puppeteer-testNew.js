@@ -14,24 +14,26 @@ const puppeteer = require('puppeteer');
   const page = await browser.newPage();
   try {
     await page.goto('https://8081-fcebccfceabbafdecaababdaaceb.premiumproject.examly.io/login.html');
-    await page.setViewport({
-      width: 1200,
-      height: 1200,
-    });
+    await page.setViewport({ width: 100, height: 667 }); // Adjust height as needed
 
-    // Use Puppeteer to evaluate the media query
-    const isMediaQueryUsed = await page.evaluate(() => {
-      const mediaQuery = window.matchMedia('(max-width: 768px)');
-      return mediaQuery.matches;
-    });
+  // Wait for the .login element to be present
+  await page.waitForSelector('.login');
 
-    const expectedMediaQueryUsage = true; // Adjust this based on your expectations
+  // Get computed styles of the .login element
+  const computedStylesMobile = await page.$eval('.login', (loginElement) => {
+ 
+   return getComputedStyle(loginElement).fontSize
+  });
 
-    if (isMediaQueryUsed === expectedMediaQueryUsage) {
-      console.log('TESTCASE:testcase_for_media_query:success');
-    } else {
-      console.log('TESTCASE:testcase_for_media_query:failure');
-    }
+  // Set the viewport to emulate a device with a width between 376px and 767px
+  await page.setViewport({ width: 1000, height: 800 }); // Adjust width and height as needed
+
+  // Get computed styles of the .login element for the second media query
+  const computedStylesTablet = await page.$eval('.login', (loginElement) => {
+    return  getComputedStyle(loginElement).fontSize
+  });
+
+  console.log("computedStylesMobile",computedStylesMobile,"computedStylesTablet",computedStylesTablet);
   } catch (e) {
     console.log("e",e);
     console.log('TESTCASE:testcase_for_media_query:failure');
