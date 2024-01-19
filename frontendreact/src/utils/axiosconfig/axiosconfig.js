@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const baseURL = "https://8080-abfdabeabcbaedabbafdecaababdaaceb.premiumproject.examly.io";
+const baseURL = "https://8080-fcebccfceabbafdecaababdaaceb.premiumproject.examly.io";
 
 const urlParams = new URLSearchParams(window.location.search);
 

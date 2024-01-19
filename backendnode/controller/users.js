@@ -40,6 +40,7 @@ const register = async (req, res, next) => {
 //login Logic
 
 const login = async (req, res, next) => {
+  console.log("came in login");
   let { email, password } = req.body;
   try {
     const userData = await userModel.findOne({ email });

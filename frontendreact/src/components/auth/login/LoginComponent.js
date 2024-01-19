@@ -71,6 +71,7 @@ function LoginComponent() {
               localStorage.setItem("rememberMe", rememberMe);
               setRole(response.data.role);
               dispatch(setUserRole(response.data.role));
+              console.log("response.data",response.data);
 
               response.data.role === "user"
                 ? navigate("/user/table")
@@ -82,6 +83,7 @@ function LoginComponent() {
             });
           }
         } catch (error) {
+          console.log("error",error);
           addToast("An error occurred while logging in.", {
             appearance: "error",
           });
