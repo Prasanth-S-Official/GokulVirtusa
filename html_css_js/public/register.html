@@ -76,11 +76,7 @@
                         <i class="fa fa-phone pe-2" aria-hidden="true"></i>
                         <span class="line"></span>
                       </div>
-                      <div class="d-none">
-                        <p class="text-danger">phone number is required</p>
-                        <p class="text-danger">This is invalid phone number!</p>
-                      </div>
-
+                   
                     </div>
                   </div>
                   <div class="form-group mt-3">
@@ -94,17 +90,14 @@
                       <div class="passwordicon">
                         <i class="fa fa-eye-slash" aria-hidden="true"></i>
                       </div>
-                      <div class="d-none">
-                        <p class="text-danger">Password is required</p>
-                        <p class="text-danger">This is invalid password!</p>
-                      </div>
+                      
 
                     </div>
                   </div>
                   <div class="form-group radiobtn mt-3">
                     <label class="d-block">Role <sup class="text-danger">*</sup></label>
-                    <input type="radio" value="user"> <span>User</span> &nbsp;&nbsp;
-                    <input type="radio" value="admin"> <span>Admin</span>
+                    <input type="radio" name="role" checked="true" value="user"> <span>User</span> &nbsp;&nbsp;
+                    <input type="radio" name="role" value="admin"> <span>Admin</span>
                   </div>
                   <div class="form-group text-center mt-3">
                     <button type="submit" class="btn submitbtn">Register</button>
