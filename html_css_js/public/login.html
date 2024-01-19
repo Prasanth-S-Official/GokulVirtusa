@@ -43,7 +43,7 @@
                                         <label class="d-block">Email <sup class="text-danger">*</sup></label>
                                         <div class="position-relative">
                                             <input id="emailField" class="input position-relative email" type="text"
-                                                placeholder="example@gmail.com">
+                                                placeholder="example@gmail.com" onchange="">
                                             <div class="icon">
                                                 <img src="./assets/mailicon.svg" class="pe-2" alt="">
                                                 <span class="line"></span>
@@ -126,6 +126,9 @@
             const password = passwordField.value;
 
             // Validate email
+            if (!(email)) {
+                emailError.textContent = 'Email is required';
+            }
             if (!validateEmail(email)) {
                 emailError.textContent = 'Invalid email format. Please use a valid email address.';
             }
@@ -133,6 +136,9 @@
             // Validate password
             if (!validatePassword(password)) {
                 passwordError.textContent = 'Invalid password format. Please use a strong password.';
+            }
+            if (!validatePassword(password)) {
+                passwordError.textContent = 'Password is required';
             }
 
             // If both email and password are valid, you can submit the form
