@@ -13,7 +13,7 @@ const puppeteer = require('puppeteer');
   });
   const page = await browser.newPage();
   try {
-    await page.goto('https://8081-fcebccfceabbafdecaababdaaceb.premiumproject.examly.io/admin/dashboard.html');
+    await page.goto('https://8081-fcebccfceabbafdecaababdaaceb.premiumproject.examly.io/login.html');
     await page.setViewport({
       width: 1200,
       height: 1200,
