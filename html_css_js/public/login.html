@@ -146,6 +146,7 @@
             if (!(email)) {
                 emailError.textContent = 'Email is required';
             }
+            validateEmail(email)
            
             // Validate password
         
@@ -153,6 +154,7 @@
                 passwordError.textContent = 'Password is required';
             }
 
+            
             // If both email and password are valid, you can submit the form
          
         }
