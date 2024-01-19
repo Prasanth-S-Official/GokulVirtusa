@@ -43,7 +43,7 @@
                                         <label class="d-block">Email <sup class="text-danger">*</sup></label>
                                         <div class="position-relative">
                                             <input id="emailField" class="input position-relative email" type="text"
-                                                placeholder="example@gmail.com" onchange="han">
+                                                placeholder="example@gmail.com" onchange="validateEmail(this.value)">
                                             <div class="icon">
                                                 <img src="./assets/mailicon.svg" class="pe-2" alt="">
                                                 <span class="line"></span>
@@ -59,7 +59,7 @@
                                         <label class="d-block">Password <sup class="text-danger">*</sup></label>
                                         <div class="position-relative">
                                             <input class="input password" type="password" id="passwordField"
-                                                placeholder="********">
+                                                placeholder="********" >
                                             <div class="icon">
                                                 <img src="./assets/passwordicon.svg" class="pe-2" alt="loginPage">
                                                 <span class="line"></span>
@@ -97,20 +97,33 @@
     </div>
 
     <script>
-        function validateEmail(email) {
+        function validateEmail() {
+            
+            const emailField = document.getElementById('emailField');
+            const emailError = document.getElementById('error-email');
+
+            console.log("vame",emailField.value)
             const emailRegex = /\S+@\S+\.\S+/;
-            if(!emailRegex.test(email))
+            if(!emailRegex.test(emailField.value))
             {
                 emailError.textContent="Invalid email address"
             }
 
-                ;
+                
         }
 
         // Function to validate the password using the regex
-        function validatePassword(password) {
+        function validatePassword() {
+            const passwordField = document.getElementById('passwordField');
+
+            const passwordError = document.getElementById('error-password');
+
             const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
-            return passwordRegex.test(password);
+            
+            if(! passwordRegex.test(passwordField.value))
+            {
+                passwordError.textContent="Invalid password"
+            }
         }
 
         // Function to handle form submission
@@ -141,15 +154,14 @@
             }
 
             // If both email and password are valid, you can submit the form
-            if (validateEmail(email)
-                && validatePassword(password)) {
-                document.getElementById('loginForm').submit();
-            }
+         
         }
 
         const loginForm = document.getElementById('loginForm');
         loginForm.addEventListener('submit', handleSubmit);
-
+        document.getElementById('passwordField').addEventListener('change', function () {
+        validatePassword(this.value);
+    });
     </script>
 </body>
 
