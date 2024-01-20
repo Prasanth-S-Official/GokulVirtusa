@@ -82,7 +82,7 @@ function RegisterComponent() {
     if (!registerData.phoneNo.trim()) {
       setErrors((prevErrors) => ({
         ...prevErrors,
-        phoneNo: "Phone No. is required",
+        phoneNo: "Phone No is required",
       }));
       valid = false;
     } else if (!/^\d{10}$/.test(registerData.phoneNo.trim())) {
@@ -256,7 +256,7 @@ function RegisterComponent() {
                       </div>
                       <div className="form-group mt-3">
                         <label className="d-block">
-                          Phone No.
+                          Phone No
                           <span
                             style={{
                               color: "red",
