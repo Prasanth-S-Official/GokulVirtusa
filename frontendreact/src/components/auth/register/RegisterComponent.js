@@ -134,9 +134,10 @@ function RegisterComponent() {
           //toast
           addToast(data.message, { appearance: "success" });
           localStorage.setItem("email", registerData.email);
-          data?.role === "user"
-            ? navigate("/user/table")
-            : navigate("/admin/dashboard");
+          // data?.role === "user"
+          //   ? navigate("/user/table")
+          //   : navigate("/admin/dashboard");
+          navigate("/login")
         }
       } else if (error) {
         addToast(error.message, { appearance: "error" });

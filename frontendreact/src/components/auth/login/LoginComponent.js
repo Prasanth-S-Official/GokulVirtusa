@@ -61,17 +61,18 @@ function LoginComponent() {
             } else {
               const currentDate = new Date();
               const dateString = currentDate.toISOString();
+              console.log("response.data",response.data);
+
               localStorage.setItem("loginDateTime", dateString);
               addToast(response.data.message, { appearance: "success" });
               localStorage.setItem("loginData", JSON.stringify(response.data));
               localStorage.setItem("role", response.data.role);
               localStorage.setItem("customerName", response.data.name);
-              localStorage.setItem("customerID", response.data.userData._id);
+              localStorage.setItem("customerID", response.data._id);
               localStorage.setItem("message", response.data.message);
               localStorage.setItem("rememberMe", rememberMe);
               setRole(response.data.role);
               dispatch(setUserRole(response.data.role));
-              console.log("response.data",response.data);
 
               response.data.role === "user"
                 ? navigate("/user/table")

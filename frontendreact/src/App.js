@@ -76,7 +76,7 @@ function App() {
                 />
                 <Route path="/user/thankyou" element={<ThankyouPage />} />
               </Route>
-              <Route
+              {/* <Route
                 path="/"
                 element={
                   <Navigate
@@ -90,12 +90,14 @@ function App() {
                     replace
                   />
                 }
-              />
+              /> */}
               <Route path="/user/orders" element={<OrdersPage />} />
               <Route path="/login" element={<LoginComponent />} />
               <Route path="/register" element={<RegisterComponent />} />
               <Route path="/changepassword" element={<ForgotPassword />} />
               {/* <Route path="/verifyotp" element={<OtpComponent />} /> */}
+              <Route path="*" element={<LoginComponent />} />
+
             </Routes>
           </div>
         </ToastProvider>
