@@ -96,7 +96,8 @@ function App() {
               <Route path="/register" element={<RegisterComponent />} />
               <Route path="/changepassword" element={<ForgotPassword />} />
               {/* <Route path="/verifyotp" element={<OtpComponent />} /> */}
-              <Route path="*" element={<LoginComponent />} />
+              {/* <Route path="*" element={<LoginComponent />} /> */}
+              <Route path="*" element={<Navigate to="/login" />} />
 
             </Routes>
           </div>

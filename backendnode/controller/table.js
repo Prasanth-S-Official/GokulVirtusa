@@ -17,7 +17,7 @@ const addTable= async (req,res,next)=>{
         console.log(req.body);
         res.status(200).json({
             error:false,
-            message:"table has been added successfully",
+            message:"table added successfully",
             data:null
         })
     }
