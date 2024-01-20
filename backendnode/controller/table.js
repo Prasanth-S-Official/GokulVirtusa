@@ -132,3 +132,7 @@ module.exports = {
     editTableStatus,
     bookTable
 }
+
+// git remote add origin https://github.com/Prasanth-S-Official/updatedincremental.git
+// git branch -M main
+// git push -u origin main
