@@ -1184,9 +1184,7 @@ console.log("data?.data",data?.data);
         </div>
 
         <div className="col-md-4">
-          <button className="logoutbutton" onClick={()=>{
-                                  navigate("/login");
-          }}>Logout</button>
+         
           <OrderBilling
             title="Preview Order"
             cartItemsData={cartItemsData}
