@@ -33,9 +33,10 @@ function LoginComponent() {
   });
 
   useEffect(() => {
+    localStorage.clear()
+
     const remember = JSON.parse(localStorage.getItem("rememberMe"));
     setRememberMe(remember);
-    localStorage.clear()
     if (remember) {
       const savedEmail = localStorage.getItem("savedEmail");
       const savedPassword = localStorage.getItem("savedPassword");
