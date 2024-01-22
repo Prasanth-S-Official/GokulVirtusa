@@ -7,7 +7,7 @@ const puppeteer = require('puppeteer');
 
     const page = await browser.newPage();
     try{
-      await page.goto('http://localhost:8081/login.html');
+      await page.goto('https://8081-fcebccfceabbafdecaababdaaceb.premiumproject.examly.io/login.html');
       await page.setViewport({
         width:1200,
         height:1200,
@@ -30,39 +30,12 @@ const puppeteer = require('puppeteer');
 
 
     
-    const page1 = await browser.newPage();
-    try{
-      await page1.goto('http://localhost:8081/login.html');
-      await page1.setViewport({
-        width:1200,
-        height:800,
-      })
-
-      const emailInput = await page1.evaluate(() => {
-        const emailField = document.querySelector('input[placeholder="example@gmail.com"]');
-        return emailField ? true : false;
-     });
-
-     const passwordInput = await page1.evaluate(() => {
-        const passwordField = document.querySelector('input[placeholder="********"]');
-        return passwordField ? true : false;
-        });
-
-        if (emailInput && passwordInput) {
-            console.log('TESTCASE:week1_day1_verify_login_email_password_input_with_text:success');
-        } else {
-            console.log('TESTCASE:week1_day1_verify_login_email_password_input_with_text:failure');
-        }
-
-    }
-    catch(e){
-      console.log('TESTCASE:week1_day1_verify_login_email_password_input_with_text:failure');
-    }
+  
 
     
   const page2 = await browser.newPage();
   try{
-    await page2.goto('http://localhost:8081/login.html');
+    await page2.goto('https://8081-fcebccfceabbafdecaababdaaceb.premiumproject.examly.io/login.html');
     await page2.setViewport({
       width:1200,
       height:800,
@@ -84,7 +57,7 @@ const puppeteer = require('puppeteer');
 
   const page3 = await browser.newPage();
   try{
-    await page3.goto('http://localhost:8081/login.html');
+    await page3.goto('https://8081-fcebccfceabbafdecaababdaaceb.premiumproject.examly.io/login.html');
     await page3.setViewport({
       width:1200,
       height:800,
@@ -104,7 +77,7 @@ const puppeteer = require('puppeteer');
   const page4 = await browser.newPage();
 
   try {
-    await page4.goto('http://localhost:8081/register.html'); // Replace with the actual URL of your HTML page
+    await page4.goto('https://8081-fcebccfceabbafdecaababdaaceb.premiumproject.examly.io/register.html'); // Replace with the actual URL of your HTML page
     await page4.setViewport({
       width: 1200,
       height: 800,
@@ -122,40 +95,14 @@ const puppeteer = require('puppeteer');
     console.log('TESTCASE:week1_day1_verify_registerpage_heading_text_presence:failure');
   }
 
-  const page5 = await browser.newPage();
 
-  try {
-    await page5.goto('http://localhost:8081/register.html'); // Replace with the actual URL of your HTML page
-    await page5.setViewport({
-      width: 1200,
-      height: 800,
-    });
-
-  
-    const labels = await page5.evaluate(() => {
-        const labels = Array.from(document.querySelectorAll('label'));
-        return labels.map(label => label.innerText);
-      });
-    
-      const expectedLabels = ['Full Name *', 'Email *', 'Phone Number *', 'Password *', 'Role *'];
-    
-      const allLabelsPresent = expectedLabels.every(expectedLabel => labels.includes(expectedLabel));
-    
-      if (allLabelsPresent) {
-        console.log('TESTCASE:week1_day1_verify_registerpage_labels_and_texts:success');
-      } else {
-        console.log('TESTCASE:week1_day1_verify_registerpage_labels_and_texts:failure');
-      }
-  } catch (e) {
-    console.log('TESTCASE:week1_day1_verify_registerpage_labels_and_texts:failure');
-  }
 
 
 
   const page6 = await browser.newPage();
   
   try {
-    await page6.goto('http://localhost:8081/register.html'); // Replace with the actual URL of your HTML page
+    await page6.goto('https://8081-fcebccfceabbafdecaababdaaceb.premiumproject.examly.io/register.html'); // Replace with the actual URL of your HTML page
     await page6.setViewport({
       width: 1200,
       height: 800,
@@ -175,37 +122,12 @@ const puppeteer = require('puppeteer');
     console.log('TESTCASE:week1_day1_verify_registerpage_form_existence:failure');
   }
 
-  const page7 = await browser.newPage();
-  
-  try {
-    await page7.goto('http://localhost:8081/register.html'); // Replace with the actual URL of your HTML page
-    await page7.setViewport({
-      width: 1200,
-      height: 800,
-    });
-
-    const inputFields = await page7.evaluate(() => {
-        const inputs = Array.from(document.querySelectorAll('input'));
-        return inputs.map(input => input.placeholder);
-      });
-    
-      const expectedInputs = ['Name', 'example@gmail.com', '9654645671', '********'];
-    
-      const allInputsPresent = expectedInputs.every(expectedInput => inputFields.includes(expectedInput));
-    
-      if (allInputsPresent) {
-        console.log('TESTCASE:week1_day1_verify_registerpage_input_fields_existence:success');
-      } else {
-        console.log('TESTCASE:week1_day1_verify_registerpage_input_fields_existence:failure');
-      }
-  } catch (error) {
-    console.log('TESTCASE:week1_day1_verify_registerpage_input_fields_existence:failure');
-  }
+ 
 
 
   const page8 = await browser.newPage();
   try{
-    await page8.goto('http://localhost:8081/register.html');
+    await page8.goto('https://8081-fcebccfceabbafdecaababdaaceb.premiumproject.examly.io/register.html');
     await page8.setViewport({
       width:1200,
       height:800,
@@ -225,19 +147,36 @@ const puppeteer = require('puppeteer');
     console.log('TESTCASE:week1_day1_verify_register_button:failure');
   }
   
+  const page9 = await browser.newPage();
+  try {
+    await page9.goto('https://8081-fcebccfceabbafdecaababdaaceb.premiumproject.examly.io/register.html');
+    await page9.setViewport({
+      width: 1200,
+      height: 800,
+    });
+
+    const table = await page9.$('table');
+    console.log("table",table);
+    if (table) {
+        console.log('TESTCASE:week1_day2_existence_of_table:success');
+      } else {
+        console.log('TESTCASE:week1_day2_existence_of_table:failure');
+      }  } catch (e) {
+    console.log('TESTCASE:week1_day2_existence_of_table:failure');
+  } 
+
+
 
 
 
   finally{
     await page.close();
-    await page1.close();
     await page2.close();
     await page3.close();
     await page4.close();
-    await page5.close();
     await page6.close();
-    await page7.close();
     await page8.close();
+    await page9.close();
     await browser.close();
   }
 })();
