@@ -80,7 +80,7 @@ function OrderBilling({ cartItemsData, changeDishCount,title }) {
                           <div className="d-flex justify-content-between mr-1">
                             <p className="dishName ">{val.name}</p>
 
-                            <div>
+                            {/* <div>
                               <button
                                 className="minubtn btn p-0"
                                 onClick={() => {
@@ -92,7 +92,7 @@ function OrderBilling({ cartItemsData, changeDishCount,title }) {
                                   aria-hidden="true"
                                 ></i>
                               </button>
-                            </div>
+                            </div> */}
                           </div>
                           <p className="dishDescription">{val.description}</p>
                         </div>
