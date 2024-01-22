@@ -169,7 +169,7 @@ if(data)
   return (
    <div className={`parentRating `}>
 
-     <div className={`listmenu ${isPopupOpen ? 'overlay' : ''}`}>
+     <div className={`listmenu ${isPopupOpen ? 'overlay filter' : ''}`}>
       <div className="container-fluid">
         <div className="card cardUsers p-2">
           <div className="d-flex align-items-center justify-content-between ">
