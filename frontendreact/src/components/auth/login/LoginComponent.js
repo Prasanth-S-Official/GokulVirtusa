@@ -244,7 +244,7 @@ function LoginComponent() {
                     </div>
                     <div className="form-group text-center mt-4">
                       <small>
-                        Don't have an account?{" "}
+                        Don't have an account?
                         <Link to="/register">Create an account</Link>{" "}
                       </small>
                     </div>
