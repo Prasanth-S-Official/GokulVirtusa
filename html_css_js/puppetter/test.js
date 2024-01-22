@@ -149,34 +149,99 @@ const puppeteer = require('puppeteer');
   
   const page9 = await browser.newPage();
   try {
-    await page9.goto('https://8081-fcebccfceabbafdecaababdaaceb.premiumproject.examly.io/register.html');
+    await page9.goto('https://8081-fcebccfceabbafdecaababdaaceb.premiumproject.examly.io/admin/payment.html');
     await page9.setViewport({
       width: 1200,
       height: 800,
     });
+    await page9.waitForSelector('table', { timeout: 2000 });
 
     const table = await page9.$('table');
-    console.log("table",table);
     if (table) {
-        console.log('TESTCASE:week1_day2_existence_of_table:success');
+        console.log('TESTCASE:week1_day2_existence_of_table_in_admin_payment_page:success');
       } else {
-        console.log('TESTCASE:week1_day2_existence_of_table:failure');
+        console.log('TESTCASE:week1_day2_existence_of_table_in_admin_payment_page:failure');
       }  } catch (e) {
-    console.log('TESTCASE:week1_day2_existence_of_table:failure');
+    console.log('TESTCASE:week1_day2_existence_of_table_in_admin_payment_page:failure');
   } 
 
+  const page10 = await browser.newPage();
+  try {
+    await page10.goto('https://8081-fcebccfceabbafdecaababdaaceb.premiumproject.examly.io/admin/payment.html');
+    await page10.setViewport({
+      width: 1200,
+      height: 800,
+    });
+    await page10.waitForSelector('th', { timeout: 2000 });
 
-
-
-
-  finally{
-    await page.close();
-    await page2.close();
-    await page3.close();
-    await page4.close();
-    await page6.close();
-    await page8.close();
-    await page9.close();
-    await browser.close();
+    const thElements = await page10.$$('th');
+  
+    if (thElements.length > 0) {
+      console.log('TESTCASE:week1_day2_existence_of_th_elements_in_admin_payment_page:success');
+    } else {
+      console.log('TESTCASE:week1_day2_existence_of_th_elements_in_admin_payment_page:failure');
+    }
+  } catch (e) {
+    console.log('TESTCASE:week1_day2_existence_of_th_elements_in_admin_payment_page:failure');
+  } finally {
+    await page10.close();
   }
+  
+  const page11 = await browser.newPage();
+  try {
+    await page11.goto('https://8081-fcebccfceabbafdecaababdaaceb.premiumproject.examly.io/admin/payment.html');
+    await page11.setViewport({
+      width: 1200,
+      height: 800,
+    });
+    await page11.waitForSelector('td', { timeout: 2000 });
+
+    const tdElements = await page11.$$('td');
+  
+    if (tdElements.length > 0) {
+      console.log('TESTCASE:week1_day2_existence_of_td_elements_in_admin_payment_page:success');
+    } else {
+      console.log('TESTCASE:week1_day2_existence_of_td_elements_in_admin_payment_page:failure');
+    }
+  } catch (e) {
+    console.log('TESTCASE:week1_day2_existence_of_td_elements_in_admin_payment_page:failure');
+  } finally {
+    await page11.close();
+  }
+  const page12 = await browser.newPage();
+try {
+  await page12.goto('https://8081-fcebccfceabbafdecaababdaaceb.premiumproject.examly.io/admin/payment.html');
+  await page12.setViewport({
+    width: 1200,
+    height: 800,
+  });
+  await page12.waitForSelector('input[type="text"]', { timeout: 2000 });
+
+  const inputField = await page12.$('input[type="text"]');
+
+  if (inputField) {
+    console.log('TESTCASE:week1_day2_existence_of_input_field_in_admin_payment_page:success');
+  } else {
+    console.log('TESTCASE:week1_day2_existence_of_input_field_in_admin_payment_page:failure');
+  }
+} catch (e) {
+  console.log('TESTCASE:week1_day2_existence_of_input_field_in_admin_payment_page:failure');
+} finally {
+  await page12.close();
+}
+
+    await browser.close();
+
+
+
+//   finally{
+//     await page.close();
+//     await page2.close();
+//     await page3.close();
+//     await page4.close();
+//     await page6.close();
+//     await page8.close();
+//     await page9.close();
+//     await browser.close();
+//   }
 })();
