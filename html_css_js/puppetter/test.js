@@ -323,8 +323,6 @@ catch(e){
   console.log('TESTCASE:week1_day5_heading_in_admin_table_page:failure');
 }
 
-
-
 const page16 = await browser.newPage();
 try {
   await page16.goto('https://8081-fcebccfceabbafdecaababdaaceb.premiumproject.examly.io/admin/table.html');
@@ -345,6 +343,113 @@ try {
 } finally {
   await page16.close();
 }
+const page17 = await browser.newPage();
+try{
+  await page17.goto('https://8081-fcebccfceabbafdecaababdaaceb.premiumproject.examly.io/admin/user.html');
+  await page17.setViewport({
+    width:1200,
+    height:1200,
+  })
+  const headingTexts = await page17.evaluate(() => {
+    const headings = Array.from(document.querySelectorAll('h1, h2, h3, h4, h5, h6'));
+    return headings.map(h => h.innerText);
+  });
+  if (headingTexts.some(text => text.includes('Users'))) {
+    console.log('TESTCASE:week3_day1_heading_in_admin_user_page:success');
+  } else {
+    console.log('TESTCASE:week3_day1_heading_in_admin_user_page:failure');
+  }
+
+    }
+catch(e){
+  console.log('TESTCASE:week3_day1_heading_in_admin_user_page:failure');
+}
+
+
+const page18 = await browser.newPage();
+  try {
+    await page18.goto('https://8081-fcebccfceabbafdecaababdaaceb.premiumproject.examly.io/admin/user.html');
+    await page18.setViewport({
+      width: 1200,
+      height: 800,
+    });
+    await page18.waitForSelector('table', { timeout: 2000 });
+
+    const table = await page18.$('table');
+    if (table) {
+        console.log('TESTCASE:week3_day1_existence_of_table_in_admin_user_page:success');
+      } else {
+        console.log('TESTCASE:week3_day1_existence_of_table_in_admin_user_page:failure');
+      }  } catch (e) {
+    console.log('TESTCASE:week3_day1_existence_of_table_in_admin_user_page:failure');
+  } 
+
+  const page19 = await browser.newPage();
+  try {
+    await page19.goto('https://8081-fcebccfceabbafdecaababdaaceb.premiumproject.examly.io/admin/user.html');
+    await page19.setViewport({
+      width: 1200,
+      height: 800,
+    });
+    await page19.waitForSelector('th', { timeout: 2000 });
+
+    const thElements = await page19.$$('th');
+  
+    if (thElements.length > 0) {
+      console.log('TESTCASE:week3_day1_existence_of_table_heading_in_admin_user_page:success');
+    } else {
+      console.log('TESTCASE:week3_day1_existence_of_table_heading_in_admin_user_page:failure');
+    }
+  } catch (e) {
+    console.log('TESTCASE:week3_day1_existence_of_table_heading_in_admin_user_page:failure');
+  } finally {
+    await page19.close();
+  }
+  
+  const page20 = await browser.newPage();
+  try {
+    await page20.goto('https://8081-fcebccfceabbafdecaababdaaceb.premiumproject.examly.io/admin/user.html');
+    await page20.setViewport({
+      width: 1200,
+      height: 800,
+    });
+    await page20.waitForSelector('td', { timeout: 2000 });
+
+    const tdElements = await page20.$$('td');
+  
+    if (tdElements.length > 0) {
+      console.log('TESTCASE:week3_day1_existence_of_table_data_in_admin_user_page:success');
+    } else {
+      console.log('TESTCASE:week3_day1_existence_of_table_data_in_admin_user_page:failure');
+    }
+  } catch (e) {
+    console.log('TESTCASE:week3_day1_existence_of_table_data_in_admin_user_page:failure');
+  } finally {
+    await page20.close();
+  }
+  const page21 = await browser.newPage();
+  try {
+    await page21.goto('https://8081-fcebccfceabbafdecaababdaaceb.premiumproject.examly.io/admin/user.html');
+    await page21.setViewport({
+      width: 1200,
+      height: 800,
+    });
+    await page20.waitForSelector('td', { timeout: 2000 });
+
+    const tdElements = await page20.$$('td');
+  
+    if (tdElements.length > 0) {
+      console.log('TESTCASE:week3_day1_existence_of_table_data_in_admin_user_page:success');
+    } else {
+      console.log('TESTCASE:week3_day1_existence_of_table_data_in_admin_user_page:failure');
+    }
+  } catch (e) {
+    console.log('TESTCASE:week3_day1_existence_of_table_data_in_admin_user_page:failure');
+  } finally {
+    await page20.close();
+  }
+
+
 await browser.close();
 
 
