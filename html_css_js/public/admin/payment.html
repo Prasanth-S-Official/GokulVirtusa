@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="../style.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+</head>
+
+<body>
+
+  <div class="background">
+    <div class="container-fluid pt-3">
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"><img src="../../public/assets/logo.png" alt="" class="w-100"> </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link " aria-current="page" href="../admin/dashboard.html">Dashboard</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../admin/menu.html">Menu</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../admin/table.html">Tables</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../admin/user.html">Users</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="../admin/payment.html">Payments</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+
+              <div class="d-flex align-items-center">
+                <div class="" id="navbarSupportedContent">
+                  <div class="dropdown">
+                    <button class=" dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      <img src="../assets/user.png" alt="" class="w-100 profile">
+                    </button>
+                    <ul class="dropdown-menu box arrow-top">
+                      <div class="">
+                        <div class="d-flex align-items-center">
+                          <div>
+                            <img src="../assets/user.png" alt="" class="w-100 profile">
+                          </div>
+                          <div class="ms-3">
+                            <h2 class="mb-0" style="line-height: 1;">Abc</h2>
+                            <small>abc@gmail.com</small>
+                          </div>
+                        </div>
+                        <div class="d-flex mt-3">
+                          <label>Table No. :</label>
+                          <strong class="d-inline-block ms-2">2</strong>
+                        </div>
+                        <div class="d-flex">
+                          <label>Login date & time :</label>
+                          <strong class="d-inline-block ms-2">12-10-2023</strong>
+                          <strong class="d-inline-block ms-2">10:07 AM</strong>
+                        </div>
+                        <div class="text-end mt-4">
+                          <button class="logoutbtn">Logout</button>
+                        </div>
+                      </div>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </div>
+  <div class="listmenu">
+    <div class="container-fluid">
+      <div class="card tablecard p-2">
+        <div class="d-flex align-items-center justify-content-between">
+          <div>
+            <h2 class="fw-bold mb-0 payment" style="font-size: x-large;">Payments</h2>
+          </div>
+          <div>
+            <h1 class="fw-bold mb-0 payment" style="font-size: x-large;">Total Payment : 19126/-</h1>
+          </div>
+          <div>
+            <input type="text" class="searchinput" placeholder="Search">
+
+          </div>
+        </div>
+
+        <div class="table">
+          <div class="dashboard-table">
+            <table id="payment-table">
+              <thead>
+                <tr>
+                  <th>Name &nbsp;<i class="fa fa-sort"></i></th>
+                  <th>Email &nbsp;<i class="fa fa-sort"></i></th>
+                  <th>PhoneNo &nbsp;<i class="fa fa-sort"></i></th>
+                  <th>Spent &nbsp;<i class="fa fa-sort"></i></th>
+                  <th>Status &nbsp;</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="product">
+                  <td class="product-name">abhishek</td>
+                  <td class="product-email">abhishek.d@iamneo.com</td>
+                  <td>1234567890</td>
+                  <td>364/-</td>
+                  <td class="text-success"><b>Successful</b></td>
+                </tr>
+                <tr>
+                  <td>vinuthakk</td>
+                  <td>vinutha644@gmail.com</td>
+                  <td>9345913403</td>
+                  <td>115/-</td>
+                  <td class="text-success"><b>Successful</b></td>
+                </tr>
+                <tr>
+                  <td>abhishek</td>
+                  <td>abhishek.d@iamneo.com</td>
+                  <td>1234567890</td>
+                  <td>946/-</td>
+                  <td class="text-success"><b>Successful</b></td>
+                </tr>
+                <tr>
+                  <td>abhishek</td>
+                  <td>abhishek.d@iamneo.com</td>
+                  <td>1234567890</td>
+                  <td>1316/-</td>
+                  <td class="text-success"><b>Successful</b></td>
+                </tr>
+                <tr>
+                  <td>vinuthakk</td>
+                  <td>vinutha644@gmail.com</td>
+                  <td>9345913403</td>
+                  <td>150/-</td>
+                  <td class="text-success"><b>Successful</b></td>
+                </tr>
+
+              </tbody>
+            </table>
+            
+            <div class="pagination">
+              <div class="pagination">
+                <button>
+                  <i class="fa fa-chevron-left"></i> Previous
+                </button>
+                <button class="active">
+                  1
+                </button>
+                <button>
+                  2
+                </button>
+                <button>
+                  3
+                </button>
+                <button>
+                  Next <i class="fa fa-chevron-right"></i>
+                </button>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<script>
+// const jsonServer = require('json-server');
+fetch('db.json')
+  .then((response) => response.json())
+  .then((data) => {
+    // Process the JSON data (e.g., products or any other data)
+    displayProducts(data.products);
+  })
+  .catch((error) => {
+    console.error('Error loading JSON data:', error);
+  });
+
+  function displayProducts(products) {
+  const productList = document.getElementById('productList');
+
+  products.forEach((product) => {
+    const listItem = document.createElement('li');
+    listItem.textContent = `${product.name} - Price: ${product.price}`;
+    productList.appendChild(listItem);
+  });
+}
+
+
+</script>
+
+</body>
+
+</html>

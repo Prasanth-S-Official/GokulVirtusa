@@ -147,6 +147,8 @@ const puppeteer = require('puppeteer');
     console.log('TESTCASE:week1_day1_verify_register_button:failure');
   }
   
+
+  // -------------------------------------------------------------------------------
   const page9 = await browser.newPage();
   try {
     await page9.goto('https://8081-fcebccfceabbafdecaababdaaceb.premiumproject.examly.io/admin/payment.html');
@@ -229,8 +231,42 @@ try {
 } finally {
   await page12.close();
 }
+// ---------------------------------
+const page13 = await browser.newPage();
+try {
+  await page13.goto('https://8081-fcebccfceabbafdecaababdaaceb.premiumproject.examly.io/order.html');
+  await page13.setViewport({
+    width: 1200,
+    height: 800,
+  });
+  await page13.waitForSelector('.flip-card');
 
-    await browser.close();
+  // Get the initial transformation matrix before hover
+  const initialTransform = await page13.$eval('.flip-card-inner', cardInner => {
+    const style = window.getComputedStyle(cardInner);
+    return style.getPropertyValue('transform');
+  });
+
+  // Simulate hover by triggering the hover style
+  await page13.hover('.flip-card');
+
+  // Get the transformation matrix after hover
+  const transformed = await page13.$eval('.flip-card-inner', cardInner => {
+    const style = window.getComputedStyle(cardInner);
+    return style.getPropertyValue('transform');
+  });
+
+  if (transformed!=initialTransform) {
+    console.log('TESTCASE:week1_day3_transition_property_on_hover_in_order_page:success');
+  } else {
+    console.log('TESTCASE:week1_day3_transition_property_on_hover_in_order_page:failure');
+  }
+} catch (e) {
+  console.log('TESTCASE:week1_day3_transition_property_on_hover_in_order_page:failure');
+} finally {
+  await page13.close();
+}
+await browser.close();
 
 
 
