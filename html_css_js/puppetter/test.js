@@ -632,15 +632,92 @@ const page27 = await browser.newPage();
     const checkoutButton = await page30.$('#checkout-button');
     if (checkoutButton) {
       await checkoutButton.click();
-      console.log('TESTCASE:payment_page_checkout_button:success');
+
+
+ const headingTexts = await page30.evaluate(() => {
+    const headings = Array.from(document.querySelectorAll('h1, h2, h3, h4, h5, h6'));
+    return headings.map(h => h.innerText);
+  });
+
+  if (headingTexts.some(text => text.includes('Please Provide Feedback'))) {
+    console.log('TESTCASE:week4_day1_feedback_model_exists_in_payment_page:success');
+  } else {
+    console.log('TESTCASE:week4_day1_feedback_model_exists_in_payment_page:failure');
+  }
     } else {
-      console.log('TESTCASE:payment_page_checkout_button:failure');
+      console.log('TESTCASE:week4_day1_feedback_model_exists_in_payment_page:failure');
     }
   } catch (e) {
-    console.log('TESTCASE:payment_page_checkout_button:failure',e);
+    console.log('TESTCASE:week4_day1_feedback_model_exists_in_payment_page:failure');
   } finally {
     await page30.close();
   }
+  const page31 = await browser.newPage();
+try{
+  await page31.goto('https://8081-fcebccfceabbafdecaababdaaceb.premiumproject.examly.io/forgotPassword.html');
+  await page31.setViewport({
+    width:1200,
+    height:1200,
+  })
+  const headingTexts = await page31.evaluate(() => {
+    const headings = Array.from(document.querySelectorAll('h1, h2, h3, h4, h5, h6'));
+    return headings.map(h => h.innerText);
+  });
+  if (headingTexts.some(text => text.includes('Forgot Password'))) {
+    console.log('TESTCASE:week4_day2_heading_in_forgot_password_page:success');
+  } else {
+    console.log('TESTCASE:week4_day2_heading_in_forgot_password_page:failure');
+  }
+
+    }
+catch(e){
+  console.log('TESTCASE:week4_day2_heading_in_forgot_password_page:failure');
+}
+
+const page32 = await browser.newPage();
+try {
+  await page32.goto('https://8081-fcebccfceabbafdecaababdaaceb.premiumproject.examly.io/forgotPassword.html'); // Replace with the actual path or URL
+  await page32.setViewport({
+    width: 1200,
+    height: 1200,
+  });
+
+  const labels = await page32.$$eval('label', labels => labels.map(label => label.innerText));
+  const isEmailLabelPresent = labels.some(label => label.toLowerCase().includes('email'));
+
+  if (isEmailLabelPresent) {
+    console.log('TESTCASE:week4_day2_email_field_in_forgot_password_page:success');
+  } else {
+    console.log('TESTCASE:week4_day2_email_field_in_forgot_password_page:failure');
+  }
+} catch (e) {
+  console.log('TESTCASE:week4_day2_email_field_in_forgot_password_page:failure');
+} finally {
+  await page32.close();
+}
+
+// Test Case for Page 33 - Check all labels for "New Password"
+const page33 = await browser.newPage();
+try {
+  await page33.goto('https://8081-fcebccfceabbafdecaababdaaceb.premiumproject.examly.io/forgotPassword.html'); // Replace with the actual path or URL
+  await page33.setViewport({
+    width: 1200,
+    height: 1200,
+  });
+
+  const labels = await page33.$$eval('label', labels => labels.map(label => label.innerText));
+  const isNewPasswordLabelPresent = labels.some(label => label.toLowerCase().includes('new password'));
+
+  if (isNewPasswordLabelPresent) {
+    console.log('TESTCASE:week4_day2_new_password_field_in_forgot_password_page:success');
+  } else {
+    console.log('TESTCASE:week4_day2_new_password_field_in_forgot_password_page:failure');
+  }
+} catch (e) {
+  console.log('TESTCASE:week4_day2_new_password_field_in_forgot_password_page:failure');
+} finally {
+  await page33.close();
+}
 await browser.close();
 
 
