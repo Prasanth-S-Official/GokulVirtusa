@@ -434,9 +434,9 @@ const page18 = await browser.newPage();
       width: 1200,
       height: 800,
     });
-    await page20.waitForSelector('td', { timeout: 2000 });
+    await page21.waitForSelector('td', { timeout: 2000 });
 
-    const tdElements = await page20.$$('td');
+    const tdElements = await page21.$$('td');
   
     if (tdElements.length > 0) {
       console.log('TESTCASE:week3_day1_existence_of_table_data_in_admin_user_page:success');
@@ -445,11 +445,43 @@ const page18 = await browser.newPage();
     }
   } catch (e) {
     console.log('TESTCASE:week3_day1_existence_of_table_data_in_admin_user_page:failure');
-  } finally {
-    await page20.close();
+  } 
+  finally {
+    await page21.close();
   }
 
+  const page22 = await browser.newPage();
+  try {
+    await page22.goto('https://8081-fcebccfceabbafdecaababdaaceb.premiumproject.examly.io/login.html');
+    await page22.setViewport({
+      width: 1200,
+      height: 800,
+    });
 
+    await page22.waitForSelector('#loginForm');
+
+    // Attempt to submit the form without entering any data
+    await page22.click('#loginButton');
+
+    // Wait for a brief moment to allow for potential validation messages to appear
+
+    // Check if the email and password error messages are displayed
+    const emailError = await page22.$eval('#error-email', (el) => el.textContent);
+    const passwordError = await page22.$eval('#error-password', (el) => el.textContent);
+    console.log("emailError",emailError,passwordError)
+
+    if (emailError === 'Email is required' && passwordError === 'Password is required') {
+      console.log('TESTCASE:page21_required_validation:success');
+    } else {
+      console.log('TESTCASE:page21_required_validation:failure');
+    }
+
+  } catch (e) {
+    console.log('TESTCASE:validation:failure',e);
+  } 
+  finally {
+    await page22.close();
+  }
 await browser.close();
 
 
