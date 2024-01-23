@@ -1,13 +1,13 @@
 import React, { useState } from "react";
-import logo from "../../../assets/logo.png";
-import fullnameicon from "../../../assets/fullnameicon.svg";
-import mailicon from "../../../assets/mailicon.svg";
-import passwordicon from "../../../assets/passwordicon.svg";
-import register from "../../../assets/register.png";
+import logo from "../../assets/logo.png";
+import fullnameicon from "../../assets/fullnameicon.svg";
+import mailicon from "../../assets/mailicon.svg";
+import passwordicon from "../../assets/passwordicon.svg";
+import register from "../../assets/register.png";
 import { useToasts } from "react-toast-notifications";
 import { Link, useNavigate } from "react-router-dom";
 import { registerService } from "../../services/authServices";
-import "./register.component.css";
+import "./Register.css";
 function Register() {
   const [registerData, setregisterData] = useState({
     name: "",

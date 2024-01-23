@@ -16,7 +16,7 @@ import TableSelection from "./components/usersModule/tableSelection/TableSelecti
 import ProtectedRoutes from "./ProtectedRoutes/ProtectedRoutes";
 import ThankyouPage from "./components/usersModule/thankyouPage/ThankyouPage";
 import LoginComponent from "./components/auth/login/LoginComponent";
-import RegisterComponent from "./components/auth/register/RegisterComponent";
+import RegisterComponent from "./components/authComponents/Register";
 import ForgotPassword from "./components/auth/forgotPassword/ForgotPassword";
 import Layout from "./layout/Layout";
 import OrdersPage from "./components/usersModule/ordersPage/OrdersPage";
