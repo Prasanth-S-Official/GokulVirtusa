@@ -1,28 +1,7 @@
-/* eslint-disable testing-library/no-container */
-/* eslint-disable testing-library/no-node-access */
-/* eslint-disable testing-library/prefer-screen-queries */
+
 import { render, screen, fireEvent } from "@testing-library/react";
 import ForgotPassword from "../components/auth/forgotPassword/ForgotPassword";
 
-jest.mock("axios");
-
-jest.mock("../utils/axiosconfig/axiosconfig", () => ({
-  axiosInstance: jest.fn(),
-}));
-
-jest.mock("react-toast-notifications", () => ({
-  useToasts: () => ({
-    addToast: jest.fn(),
-  }),
-}));
-
-jest.mock("react-router-dom", () => ({
-  useNavigate: () => jest.fn(),
-}));
-jest.mock("react-router-dom", () => ({
-  Link: ({ to, children }) => <a href={to}>{children}</a>,
-  useNavigate: () => jest.fn(),
-}));
 
 describe("Week4_Day5_For Forgot Password component", () => {
   it("week4_day5_testcase_to_check_the_rendering_of_forgotpassword_component", () => {
