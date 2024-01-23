@@ -239,7 +239,8 @@ try {
     width: 1200,
     height: 800,
   });
-  await page13.waitForSelector('.flip-card');
+  await page13.waitForSelector('.flip-card', { timeout: 2000 });
+  await page13.waitForSelector('.flip-card-inner', { timeout: 2000 });
 
   // Get the initial transformation matrix before hover
   const initialTransform = await page13.$eval('.flip-card-inner', cardInner => {
@@ -265,6 +266,40 @@ try {
   console.log('TESTCASE:week1_day3_transition_property_on_hover_in_order_page:failure');
 } finally {
   await page13.close();
+}
+
+
+const page14 = await browser.newPage();
+try {
+  await page14.goto('https://8081-fcebccfceabbafdecaababdaaceb.premiumproject.examly.io/login.html');
+  await page14.setViewport({ width: 100, height: 667 }); // Adjust height as needed
+
+// Wait for the .login element to be present
+await page14.waitForSelector('.login');
+
+// Get computed styles of the .login element
+const computedStylesMobile = await page14.$eval('.login', (loginElement) => {
+
+ return getComputedStyle(loginElement).fontSize
+});
+
+// Set the viewport to emulate a device with a width between 376px and 767px
+await page14.setViewport({ width: 1000, height: 800 }); // Adjust width and height as needed
+
+// Get computed styles of the .login element for the second media query
+const computedStylesTablet = await page14.$eval('.login', (loginElement) => {
+  return  getComputedStyle(loginElement).fontSize
+});
+if (computedStylesTablet!=computedStylesMobile) {
+  console.log('TESTCASE:week1_day4_responsive_design_check_in_login_page:success');
+} else {
+  console.log('TESTCASE:week1_day4_responsive_design_check_in_login_page:failure');
+}
+} catch (e) {
+  console.log('TESTCASE:week1_day4_responsive_design_check_in_login_page:failure');
+} finally {
+  await page.close();
+  await browser.close();
 }
 await browser.close();
 
