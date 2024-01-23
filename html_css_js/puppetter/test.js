@@ -298,8 +298,52 @@ if (computedStylesTablet!=computedStylesMobile) {
 } catch (e) {
   console.log('TESTCASE:week1_day4_responsive_design_check_in_login_page:failure');
 } finally {
-  await page.close();
-  await browser.close();
+  await page14.close();
+}
+// ----------------------------------------
+const page15 = await browser.newPage();
+try{
+  await page15.goto('https://8081-fcebccfceabbafdecaababdaaceb.premiumproject.examly.io/admin/table.html');
+  await page15.setViewport({
+    width:1200,
+    height:1200,
+  })
+  const headingTexts = await page15.evaluate(() => {
+    const headings = Array.from(document.querySelectorAll('h1, h2, h3, h4, h5, h6'));
+    return headings.map(h => h.innerText);
+  });
+  if (headingTexts.some(text => text.includes('Tables'))) {
+    console.log('TESTCASE:week1_day5_heading_in_admin_table_page:success');
+  } else {
+    console.log('TESTCASE:week1_day5_heading_in_admin_table_page:failure');
+  }
+
+    }
+catch(e){
+  console.log('TESTCASE:week1_day5_heading_in_admin_table_page:failure');
+}
+
+
+
+const page16 = await browser.newPage();
+try {
+  await page16.goto('https://8081-fcebccfceabbafdecaababdaaceb.premiumproject.examly.io/admin/table.html');
+  await page16.setViewport({
+    width: 1200,
+    height: 800,
+  });
+  await page16.waitForSelector('img', { timeout: 2000 });
+
+  const tdElements = await page16.$$('img');
+  if (tdElements.length > 0) {
+    console.log('TESTCASE:week1_day5_table_images_in_admin_table_page:success');
+  } else {
+    console.log('TESTCASE:week1_day5_table_images_in_admin_table_page:failure');
+  }
+} catch (e) {
+  console.log('TESTCASE:week1_day5_table_images_in_admin_table_page:failure');
+} finally {
+  await page16.close();
 }
 await browser.close();
 
