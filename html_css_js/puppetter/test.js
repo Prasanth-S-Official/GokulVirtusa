@@ -18,14 +18,14 @@ const puppeteer = require('puppeteer');
       });
     
       if (headingTexts.some(text => text.includes('Login to Your Account'))) {
-        console.log('TESTCASE:week1_day1_verify_login_heading_text_presence:success');
+        console.log('TESTCASE:week2_day1_verify_login_heading_text_presence:success');
       } else {
-        console.log('TESTCASE:week1_day1_verify_login_heading_text_presence:failure');
+        console.log('TESTCASE:week2_day1_verify_login_heading_text_presence:failure');
       }
     
         }
     catch(e){
-      console.log('TESTCASE:week1_day1_verify_login_heading_text_presence:failure');
+      console.log('TESTCASE:week2_day1_verify_login_heading_text_presence:failure');
     }
 
 
@@ -46,13 +46,13 @@ const puppeteer = require('puppeteer');
       });
     
       if (loginButton) {
-        console.log('TESTCASE:week1_day1_verify_login_button:success');
+        console.log('TESTCASE:week2_day1_verify_login_button:success');
       } else {
-        console.log('TESTCASE:week1_day1_verify_login_button:failure');
+        console.log('TESTCASE:week2_day1_verify_login_button:failure');
       }
   }
   catch(e){
-    console.log('TESTCASE:week1_day1_verify_login_button:failure');
+    console.log('TESTCASE:week2_day1_verify_login_button:failure');
   }
 
   const page3 = await browser.newPage();
@@ -65,13 +65,13 @@ const puppeteer = require('puppeteer');
   const bodyText = await page3.evaluate(() => document.body.innerText);
 
     if (bodyText.includes("Don't have an account?")) {
-        console.log('TESTCASE:week1_day1_verify_no_account_text_presence_in_loginpage:success');
+        console.log('TESTCASE:week2_day1_verify_no_account_text_presence_in_loginpage:success');
     } else {
-        console.log('TESTCASE:week1_day1_verify_no_account_text_presence_in_loginpage:failure');
+        console.log('TESTCASE:week2_day1_verify_no_account_text_presence_in_loginpage:failure');
     }
   }
   catch(e){
-    console.log('TESTCASE:week1_day1_verify_no_account_text_presence_in_loginpage:failure');
+    console.log('TESTCASE:week2_day1_verify_no_account_text_presence_in_loginpage:failure');
   }
 
   const page4 = await browser.newPage();
@@ -87,12 +87,12 @@ const puppeteer = require('puppeteer');
     const bodyText = await page4.evaluate(() => document.body.innerText);
 
     if (bodyText.includes('Create Account')) {
-      console.log('TESTCASE:week1_day1_verify_registerpage_heading_text_presence:success');
+      console.log('TESTCASE:week2_day1_verify_registerpage_heading_text_presence:success');
     } else {
-      console.log('TESTCASE:week1_day1_verify_registerpage_heading_text_presence:failure');
+      console.log('TESTCASE:week2_day1_verify_registerpage_heading_text_presence:failure');
     }
   } catch (e) {
-    console.log('TESTCASE:week1_day1_verify_registerpage_heading_text_presence:failure');
+    console.log('TESTCASE:week2_day1_verify_registerpage_heading_text_presence:failure');
   }
 
 
@@ -114,12 +114,12 @@ const puppeteer = require('puppeteer');
       });
     
       if (formExists) {
-        console.log('TESTCASE:week1_day1_verify_registerpage_form_existence:success');
+        console.log('TESTCASE:week2_day1_verify_registerpage_form_existence:success');
       } else {
-        console.log('TESTCASE:week1_day1_verify_registerpage_form_existence:failure');
+        console.log('TESTCASE:week2_day1_verify_registerpage_form_existence:failure');
       }
   } catch (error) {
-    console.log('TESTCASE:week1_day1_verify_registerpage_form_existence:failure');
+    console.log('TESTCASE:week2_day1_verify_registerpage_form_existence:failure');
   }
 
  
@@ -138,13 +138,13 @@ const puppeteer = require('puppeteer');
       });
     
       if (loginButton) {
-        console.log('TESTCASE:week1_day1_verify_register_button:success');
+        console.log('TESTCASE:week2_day1_verify_register_button:success');
       } else {
-        console.log('TESTCASE:week1_day1_verify_register_button:failure');
+        console.log('TESTCASE:week2_day1_verify_register_button:failure');
       }
   }
   catch(e){
-    console.log('TESTCASE:week1_day1_verify_register_button:failure');
+    console.log('TESTCASE:week2_day1_verify_register_button:failure');
   }
   
 
@@ -160,11 +160,11 @@ const puppeteer = require('puppeteer');
 
     const table = await page9.$('table');
     if (table) {
-        console.log('TESTCASE:week1_day2_existence_of_table_in_admin_payment_page:success');
+        console.log('TESTCASE:week2_day2_existence_of_table_in_admin_payment_page:success');
       } else {
-        console.log('TESTCASE:week1_day2_existence_of_table_in_admin_payment_page:failure');
+        console.log('TESTCASE:week2_day2_existence_of_table_in_admin_payment_page:failure');
       }  } catch (e) {
-    console.log('TESTCASE:week1_day2_existence_of_table_in_admin_payment_page:failure');
+    console.log('TESTCASE:week2_day2_existence_of_table_in_admin_payment_page:failure');
   } 
 
   const page10 = await browser.newPage();
@@ -179,12 +179,12 @@ const puppeteer = require('puppeteer');
     const thElements = await page10.$$('th');
   
     if (thElements.length > 0) {
-      console.log('TESTCASE:week1_day2_existence_of_th_elements_in_admin_payment_page:success');
+      console.log('TESTCASE:week2_day2_existence_of_th_elements_in_admin_payment_page:success');
     } else {
-      console.log('TESTCASE:week1_day2_existence_of_th_elements_in_admin_payment_page:failure');
+      console.log('TESTCASE:week2_day2_existence_of_th_elements_in_admin_payment_page:failure');
     }
   } catch (e) {
-    console.log('TESTCASE:week1_day2_existence_of_th_elements_in_admin_payment_page:failure');
+    console.log('TESTCASE:week2_day2_existence_of_th_elements_in_admin_payment_page:failure');
   } finally {
     await page10.close();
   }
@@ -201,12 +201,12 @@ const puppeteer = require('puppeteer');
     const tdElements = await page11.$$('td');
   
     if (tdElements.length > 0) {
-      console.log('TESTCASE:week1_day2_existence_of_td_elements_in_admin_payment_page:success');
+      console.log('TESTCASE:week2_day2_existence_of_td_elements_in_admin_payment_page:success');
     } else {
-      console.log('TESTCASE:week1_day2_existence_of_td_elements_in_admin_payment_page:failure');
+      console.log('TESTCASE:week2_day2_existence_of_td_elements_in_admin_payment_page:failure');
     }
   } catch (e) {
-    console.log('TESTCASE:week1_day2_existence_of_td_elements_in_admin_payment_page:failure');
+    console.log('TESTCASE:week2_day2_existence_of_td_elements_in_admin_payment_page:failure');
   } finally {
     await page11.close();
   }
@@ -222,12 +222,12 @@ try {
   const inputField = await page12.$('input[type="text"]');
 
   if (inputField) {
-    console.log('TESTCASE:week1_day2_existence_of_input_field_in_admin_payment_page:success');
+    console.log('TESTCASE:week2_day2_existence_of_input_field_in_admin_payment_page:success');
   } else {
-    console.log('TESTCASE:week1_day2_existence_of_input_field_in_admin_payment_page:failure');
+    console.log('TESTCASE:week2_day2_existence_of_input_field_in_admin_payment_page:failure');
   }
 } catch (e) {
-  console.log('TESTCASE:week1_day2_existence_of_input_field_in_admin_payment_page:failure');
+  console.log('TESTCASE:week2_day2_existence_of_input_field_in_admin_payment_page:failure');
 } finally {
   await page12.close();
 }
@@ -258,12 +258,12 @@ try {
   });
 
   if (transformed!=initialTransform) {
-    console.log('TESTCASE:week1_day3_transition_property_on_hover_in_order_page:success');
+    console.log('TESTCASE:week2_day3_transition_property_on_hover_in_order_page:success');
   } else {
-    console.log('TESTCASE:week1_day3_transition_property_on_hover_in_order_page:failure');
+    console.log('TESTCASE:week2_day3_transition_property_on_hover_in_order_page:failure');
   }
 } catch (e) {
-  console.log('TESTCASE:week1_day3_transition_property_on_hover_in_order_page:failure');
+  console.log('TESTCASE:week2_day3_transition_property_on_hover_in_order_page:failure');
 } finally {
   await page13.close();
 }
@@ -291,12 +291,12 @@ const computedStylesTablet = await page14.$eval('.login', (loginElement) => {
   return  getComputedStyle(loginElement).fontSize
 });
 if (computedStylesTablet!=computedStylesMobile) {
-  console.log('TESTCASE:week1_day4_responsive_design_check_in_login_page:success');
+  console.log('TESTCASE:week2_day4_responsive_design_check_in_login_page:success');
 } else {
-  console.log('TESTCASE:week1_day4_responsive_design_check_in_login_page:failure');
+  console.log('TESTCASE:week2_day4_responsive_design_check_in_login_page:failure');
 }
 } catch (e) {
-  console.log('TESTCASE:week1_day4_responsive_design_check_in_login_page:failure');
+  console.log('TESTCASE:week2_day4_responsive_design_check_in_login_page:failure');
 } finally {
   await page14.close();
 }
@@ -313,14 +313,14 @@ try{
     return headings.map(h => h.innerText);
   });
   if (headingTexts.some(text => text.includes('Tables'))) {
-    console.log('TESTCASE:week1_day5_heading_in_admin_table_page:success');
+    console.log('TESTCASE:week2_day5_heading_in_admin_table_page:success');
   } else {
-    console.log('TESTCASE:week1_day5_heading_in_admin_table_page:failure');
+    console.log('TESTCASE:week2_day5_heading_in_admin_table_page:failure');
   }
 
     }
 catch(e){
-  console.log('TESTCASE:week1_day5_heading_in_admin_table_page:failure');
+  console.log('TESTCASE:week2_day5_heading_in_admin_table_page:failure');
 }
 
 const page16 = await browser.newPage();
@@ -334,12 +334,12 @@ try {
 
   const tdElements = await page16.$$('img');
   if (tdElements.length > 0) {
-    console.log('TESTCASE:week1_day5_table_images_in_admin_table_page:success');
+    console.log('TESTCASE:week2_day5_table_images_in_admin_table_page:success');
   } else {
-    console.log('TESTCASE:week1_day5_table_images_in_admin_table_page:failure');
+    console.log('TESTCASE:week2_day5_table_images_in_admin_table_page:failure');
   }
 } catch (e) {
-  console.log('TESTCASE:week1_day5_table_images_in_admin_table_page:failure');
+  console.log('TESTCASE:week2_day5_table_images_in_admin_table_page:failure');
 } finally {
   await page16.close();
 }
@@ -533,6 +533,114 @@ try {
   await page25.close();
 }
 
+
+const page26 = await browser.newPage();
+try{
+  await page26.goto('https://8081-fcebccfceabbafdecaababdaaceb.premiumproject.examly.io/admin/menu.html');
+  await page26.setViewport({
+    width:1200,
+    height:1200,
+  })
+  const headingTexts = await page26.evaluate(() => {
+    const headings = Array.from(document.querySelectorAll('h1, h2, h3, h4, h5, h6'));
+    return headings.map(h => h.innerText);
+  });
+  if (headingTexts.some(text => text.includes('Menu Items'))) {
+    console.log('TESTCASE:week3_day5_heading_in_admin_menu_page:success');
+  } else {
+    console.log('TESTCASE:week3_day5_heading_in_admin_menu_page:failure');
+  }
+
+    }
+catch(e){
+  console.log('TESTCASE:week3_day5_heading_in_admin_menu_page:failure');
+}
+
+
+const page27 = await browser.newPage();
+  try {
+    await page27.goto('https://8081-fcebccfceabbafdecaababdaaceb.premiumproject.examly.io/admin/menu.html');
+    await page27.setViewport({
+      width: 1200,
+      height: 800,
+    });
+    await page27.waitForSelector('table', { timeout: 2000 });
+
+    const table = await page27.$('table');
+    if (table) {
+        console.log('TESTCASE:week3_day5_existence_of_table_in_admin_menu_page:success');
+      } else {
+        console.log('TESTCASE:week3_day5_existence_of_table_in_admin_menu_page:failure');
+      }  } catch (e) {
+    console.log('TESTCASE:week3_day5_existence_of_table_in_admin_menu_page:failure');
+  } 
+
+  const page28 = await browser.newPage();
+  try {
+    await page28.goto('https://8081-fcebccfceabbafdecaababdaaceb.premiumproject.examly.io/admin/menu.html');
+    await page28.setViewport({
+      width: 1200,
+      height: 800,
+    });
+    await page28.waitForSelector('th', { timeout: 2000 });
+
+    const thElements = await page28.$$('th');
+  
+    if (thElements.length > 0) {
+      console.log('TESTCASE:week3_day5_existence_of_table_heading_in_admin_menu_page:success');
+    } else {
+      console.log('TESTCASE:week3_day5_existence_of_table_heading_in_admin_menu_page:failure');
+    }
+  } catch (e) {
+    console.log('TESTCASE:week3_day5_existence_of_table_heading_in_admin_menu_page:failure');
+  } finally {
+    await page28.close();
+  }
+  
+  const page29 = await browser.newPage();
+  try {
+    await page29.goto('https://8081-fcebccfceabbafdecaababdaaceb.premiumproject.examly.io/admin/menu.html');
+    await page29.setViewport({
+      width: 1200,
+      height: 800,
+    });
+    await page29.waitForSelector('td', { timeout: 2000 });
+
+    const tdElements = await page29.$$('td');
+  
+    if (tdElements.length > 0) {
+      console.log('TESTCASE:week3_day5_existence_of_table_data_in_admin_menu_page:success');
+    } else {
+      console.log('TESTCASE:week3_day5_existence_of_table_data_in_admin_menu_page:failure');
+    }
+  } catch (e) {
+    console.log('TESTCASE:week3_day5_existence_of_table_data_in_admin_menu_page:failure');
+  } finally {
+    await page29.close();
+  }
+
+
+  const page30 = await browser.newPage();
+  try {
+    await page30.goto('https://8081-fcebccfceabbafdecaababdaaceb.premiumproject.examly.io/payment.html');
+    await page30.setViewport({
+      width: 1200,
+      height: 800,
+    });
+    await page30.waitForSelector('#checkout-button', { timeout: 2000 });
+
+    const checkoutButton = await page30.$('#checkout-button');
+    if (checkoutButton) {
+      await checkoutButton.click();
+      console.log('TESTCASE:payment_page_checkout_button:success');
+    } else {
+      console.log('TESTCASE:payment_page_checkout_button:failure');
+    }
+  } catch (e) {
+    console.log('TESTCASE:payment_page_checkout_button:failure',e);
+  } finally {
+    await page30.close();
+  }
 await browser.close();
 
 
