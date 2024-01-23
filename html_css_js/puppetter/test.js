@@ -706,7 +706,7 @@ try {
   });
 
   const labels = await page33.$$eval('label', labels => labels.map(label => label.innerText));
-  const isNewPasswordLabelPresent = labels.some(label => label.toLowerCase().includes('new password'));
+  const isNewPasswordLabelPresent = labels.some(label => label.toLowerCase()=='new password');
 
   if (isNewPasswordLabelPresent) {
     console.log('TESTCASE:week4_day2_new_password_field_in_forgot_password_page:success');
