@@ -37,6 +37,10 @@ const cricketTournamentSchema = new mongoose.Schema({
     rules: {
         type: String,
         required: true,
+    },
+    coverImage:{
+        type: String,
+        required: true,
     }
 });
 
