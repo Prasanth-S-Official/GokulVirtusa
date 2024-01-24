@@ -10,6 +10,7 @@ const cricketTournamentSchema = new mongoose.Schema({
     },
     tournamentId: {
         type: mongoose.Schema.Types.ObjectId,
+        default: ()=>new mongoose.Types.ObjectId(), // Auto-generate ObjectId for vacationId
         unique: true,
     },
     tournamentName:
