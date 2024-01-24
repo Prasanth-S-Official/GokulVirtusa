@@ -43,7 +43,5 @@ const cricketTournamentSchema = new mongoose.Schema({
         required: true,
     }
 });
-
 const CricketTournament = mongoose.model('CricketTournament', cricketTournamentSchema);
-
 module.exports = CricketTournament;
