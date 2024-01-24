@@ -13,7 +13,6 @@ const getAllCricketTournaments = async (req, res) => {
     res.status(500).json({ message: error.message });
   }
 };
-
 const getCricketTournamentById = async (req, res) => {
   try {
     const { id } = req.params;
@@ -28,7 +27,6 @@ const getCricketTournamentById = async (req, res) => {
     res.status(500).json({ message: error.message });
   }
 };
-
 const addCricketTournament = async (req, res) => {
   try {
     const cricketTournament = await CricketTournament.create(req.body);
@@ -37,7 +35,6 @@ const addCricketTournament = async (req, res) => {
     res.status(500).json({ message: error.message });
   }
 };
-
 const updateCricketTournament = async (req, res) => {
   try {
     const { id } = req.params;
@@ -52,7 +49,6 @@ const updateCricketTournament = async (req, res) => {
     res.status(500).json({ message: error.message });
   }
 };
-
 const deleteCricketTournament = async (req, res) => {
   try {
     const { id } = req.params;

@@ -1,6 +1,11 @@
 const mongoose = require('mongoose');
 
 const userSchema = new mongoose.Schema({
+  userId: {
+    type: mongoose.Schema.Types.ObjectId,
+    default: new mongoose.Types.ObjectId, // Auto-generate ObjectId for vacationId
+    unique: true,
+  },
   firstName: {
     type: String,
     required: true,
@@ -14,7 +19,6 @@ const userSchema = new mongoose.Schema({
   mobileNumber: {
     type: String,
     required: true,
- 
   },
   email: {
     type: String,
