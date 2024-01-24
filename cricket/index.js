@@ -1,7 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const userRouter = require("./routers/userRouter");
-const cricket = require("./routers/cricketTournamentRouter");
+const vacationRentalRouter = require("./routers/cricketTournamentRouter");
 const app = express();
 const cors = require("cors");
 
@@ -17,7 +17,7 @@ const corsOptions = {
 app.use(cors(corsOptions));
 
 mongoose
-  .connect("mongodb://127.0.0.1:27017/tournamentdb")
+  .connect("mongodb://127.0.0.1:27017/tounamentDB")
   .then(() => {
     console.log("Database connected");
     app.listen(8080, () => {
@@ -28,5 +28,5 @@ mongoose
     console.log(error);
   });
 
-app.use("/user", userRouter);
-app.use("/cricket",cricket );
+app.use("/api/auth", userRouter);
+app.use("/api", vacationRentalRouter);

@@ -4,12 +4,12 @@ const mongoose = require('mongoose');
 const cricketTournamentSchema = new mongoose.Schema({
     userId: {
         type: mongoose.Schema.Types.ObjectId,
+        default: ()=>new mongoose.Types.ObjectId(), // Auto-generate ObjectId for vacationId
         ref: 'User',
         required: true,
     },
     tournamentId: {
         type: mongoose.Schema.Types.ObjectId,
-        default: new mongoose.Types.ObjectId, // Auto-generate ObjectId for vacationId
         unique: true,
     },
     tournamentName:
