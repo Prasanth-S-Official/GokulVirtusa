@@ -1,22 +1,25 @@
+// controllers/CricketTournamentController.js
 const CricketTournament = require('../models/CricketTournamentModel');
 
 const getAllCricketTournaments = async (req, res) => {
   try {
-    const sortValue = req.body.sortValue || 1; // Default to ascending order if not provided
-    const search = req.body.searchValue || ''; // Default to empty string if not provided
-    const searchRegex = new RegExp(search, 'i'); // Case-insensitive search regex
-
-    const cricketTournaments = await CricketTournament.find({ name: searchRegex }, "-__v").sort({ startDate: parseInt(sortValue) });
+    const sortValue = req.query.sortValue || 1; 
+    const search = req.query.searchValue || '';
+    const searchRegex = new RegExp(search, 'i'); 
+    const cricketTournaments = await CricketTournament.find({ tournamentName: searchRegex })
+      .select('-_id -__v')
+      .sort({ startDate: parseInt(sortValue) });
 
     res.status(200).json(cricketTournaments);
   } catch (error) {
     res.status(500).json({ message: error.message });
   }
 };
+
 const getCricketTournamentById = async (req, res) => {
   try {
-    const { id } = req.params;
-    const cricketTournament = await CricketTournament.findById(id, "-__v");
+    const { tournamentId } = req.params;
+    const cricketTournament = await CricketTournament.findOne({ tournamentId }).select('-_id -__v');
 
     if (!cricketTournament) {
       res.status(404).json({ message: 'Cannot find any cricket tournament' });
@@ -27,6 +30,7 @@ const getCricketTournamentById = async (req, res) => {
     res.status(500).json({ message: error.message });
   }
 };
+
 const addCricketTournament = async (req, res) => {
   try {
     const cricketTournament = await CricketTournament.create(req.body);
@@ -35,10 +39,11 @@ const addCricketTournament = async (req, res) => {
     res.status(500).json({ message: error.message });
   }
 };
+
 const updateCricketTournament = async (req, res) => {
   try {
-    const { id } = req.params;
-    const cricketTournament = await CricketTournament.findByIdAndUpdate(id, req.body, { new: true });
+    const { tournamentId } = req.params;
+    const cricketTournament = await CricketTournament.findOneAndUpdate({ tournamentId }, req.body, { new: true });
 
     if (!cricketTournament) {
       res.status(404).json({ message: 'Cannot find any cricket tournament' });
@@ -49,10 +54,11 @@ const updateCricketTournament = async (req, res) => {
     res.status(500).json({ message: error.message });
   }
 };
+
 const deleteCricketTournament = async (req, res) => {
   try {
-    const { id } = req.params;
-    const cricketTournament = await CricketTournament.findByIdAndDelete(id);
+    const { tournamentId } = req.params;
+    const cricketTournament = await CricketTournament.findOneAndDelete({ tournamentId });
 
     if (!cricketTournament) {
       res.status(404).json({ message: 'Cannot find any cricket tournament' });
@@ -63,21 +69,22 @@ const deleteCricketTournament = async (req, res) => {
     res.status(500).json({ message: error.message });
   }
 };
+
 const getCricketTournamentsByOrganizerId = async (req, res) => {
   try {
-    const organizerId = req.body.organizerId;
-    const sortValue = req.body.sortValue || 1; // Default to ascending order if not provided
-    const search = req.body.searchValue || ''; // Default to empty string if not provided
-    const searchRegex = new RegExp(search, 'i'); // Case-insensitive search regex
+    const { userId } = req.params;
+    const search = req.query.searchValue || '';
+    const searchRegex = new RegExp(search, 'i'); 
 
-    const cricketTournaments = await CricketTournament.find({ organizer: organizerId, name: searchRegex }, "-__v")
-      .sort({ startDate: parseInt(sortValue) });
+    const cricketTournaments = await CricketTournament.find({ userId, tournamentName: searchRegex })
+      .select('-_id -__v')
 
     res.status(200).json(cricketTournaments);
   } catch (error) {
     res.status(500).json({ message: error.message });
   }
 };
+
 module.exports = {
   getAllCricketTournaments,
   getCricketTournamentById,

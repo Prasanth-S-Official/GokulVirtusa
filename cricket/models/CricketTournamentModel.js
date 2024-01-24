@@ -2,33 +2,41 @@
 const mongoose = require('mongoose');
 
 const cricketTournamentSchema = new mongoose.Schema({
-  name: {
-    type: String,
-    required: true,
-  },
-  organizer: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: 'User', // Assuming there's a User model for organizers
-    required: true,
-  },
-  startDate: {
-    type: Date,
-    required: true,
-  },
-  endDate: {
-    type: Date,
-    required: true,
-  },
-  teams: {
-    type: [String], // Array of team names participating in the tournament
-  },
-  location: {
-    type: String,
-    required: true,
-  },
-  prize: {
-    type: String,
-  }
+    userId: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'User',
+        required: true,
+    },
+    tournamentId: {
+        type: mongoose.Schema.Types.ObjectId,
+        default: new mongoose.Types.ObjectId, // Auto-generate ObjectId for vacationId
+        unique: true,
+    },
+    tournamentName:
+    {
+        type: String,
+        required: true,
+    },
+    startDate: {
+        type: Date,
+        required: true,
+    },
+    endDate: {
+        type: Date,
+        required: true,
+    },
+    location: {
+        type: String,
+        required: true,
+    },
+    prize: {
+        type: String,
+        required: true,
+    },
+    rules: {
+        type: String,
+        required: true,
+    }
 });
 
 const CricketTournament = mongoose.model('CricketTournament', cricketTournamentSchema);
