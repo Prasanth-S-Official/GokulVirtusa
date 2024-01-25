@@ -72,10 +72,13 @@ const deleteCricketTournament = async (req, res) => {
 
 const getCricketTournamentsByOrganizerId = async (req, res) => {
   try {
+
+
+
     const { userId } = req.params;
     const search = req.query.searchValue || '';
     const searchRegex = new RegExp(search, 'i'); 
-
+console.log("search",search);
     const cricketTournaments = await CricketTournament.find({ userId, tournamentName: searchRegex })
       .select('-_id -__v')
 
